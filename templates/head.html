@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>PT. Official Sertifikasi Harapan (OSHA) | Beranda</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %} ">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light" style="background-color: white;">
+        <div class="container">
+            <a href="index.html p-2" style="flex-wrap: nowrap;">
+                <img src="{% static 'images/logo_small.png' %}" class="img-fluid" alt="Logo Osha">
+            </a>
+            <span class="navbar-brand m-2">Osha</span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a href="{% url 'beranda' %}" class="nav-link text-uppercase">Beranda</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-uppercase dropdown-toggle" data-toggle="dropdown">Tentang</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{% url 'tentang:profil' %}">Sejarah Singkat</a>
+                            <a class="dropdown-item" href="{% url 'tentang:legalitas' %}">Legalitas</a>
+                            <a class="dropdown-item" href="{% url 'tentang:struktur' %}">Struktur Organisasi</a>
+                            <a class="dropdown-item" href="{% url 'tentang:daftarAsesor' %}">Daftar Asesor</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-uppercase dropdown-toggle" data-toggle="dropdown">Sertifikasi</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{% url 'sertifikasi:ruang' %}">Ruang Lingkup</a>
+                            <a class="dropdown-item" href="{% url 'sertifikasi:proses' %}">Proses Sertifikasi</a>
+                            <a class="dropdown-item" href="{% url 'sertifikasi:alur' %}">Alur Sertifikasi</a>
+                            <a class="dropdown-item" href="{% url 'sertifikasi:regulasi' %}">Regulasi Sertifikasi</a>
+                            <a class="dropdown-item" href="{% url 'pengalamanKontakForm:permohonan' %}">Permohonan Sertifikasi</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-uppercase" href="{% url 'pengalamanKontakForm:pengalaman' %}">Pengalaman dan Dokumentasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'pengalamanKontakForm:kontak' %}" class="nav-link text-uppercase">Kontak</a>
+                    </li>
+                    <li class="nav-item cta">
+                        <a href="{% url 'pengalamanKontakForm:permohonan' %}" class="btn btn-primary">
+                            <span>Permohonan Sertifikasi</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>

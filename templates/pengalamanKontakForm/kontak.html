@@ -1,0 +1,90 @@
+{% load static %}
+{% include 'head.html' %}
+    <section class="home-slider owl-carousel">
+        <div class="slider-item bread-item" data-stellar-background-ratio="0.5">
+            <div class="overlay"></div>
+            <div class="container-fluid">
+                <div class="row slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+                    <div class="col-md-8 mt-5 text-center col-sm-12 ftco-animate"
+                        data-scrollax=" properties: { translateY: '70%' }">
+                        <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                            <span class="mr-2"><a href="index.html">Beranda</a></span>
+                            <span>Kontak Kami</span>
+                        </p>
+                        <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                            Kontak Kami
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row d-flex mb-5 contact-info">
+                <div class="col-md-12 mb-4">
+                    <h2 class="h4">Informasi Kontak</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+            </div>
+            <div class="row block-9">
+                <div class="col-md-8 pr-md-5">
+                    <form action="#" method="POST">
+                        <div class="form-row">
+                            <div class="col-md my-3">
+                                <label>Nama Lengkap</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="col-md my-3">
+                                <label>Email</label>
+                                <input type="email" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-md my-3">
+                                <label>No. Handphone</label>
+                                <input type="tel" class="form-control">
+                            </div>
+                            <div class="col-md my-3">
+                                <label>Kota</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group my-3">
+                            <label>Isi Pesan</label>
+                            <textarea cols="30" rows="7" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary py-3 px-5">Kirim Pesan</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4 my-4">
+                    <h3 class="font-weight-bold">Kantor Pusat</h3>
+                    <div class="block-23 my-3">
+                        <ul>
+                            <li>
+                                <span class="text-dark icon icon-map-marker"></span>
+                                <h6 class="text-dark">PT. Official Sertifikasi Harapan</h6>
+                                <span class="text-dark">Jl. ?</span>
+                            </li>
+                            <li>
+                                <span class="text-dark icon icon-phone"></span>
+                                <h6 class="text-dark">000 0000 0000</h6>
+                            </li>
+                            <li>
+                                <span class="text-dark icon icon-envelope"></span>
+                                <h6 class="text-dark">email@osha.com</h6>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    {% include 'footer.html' %}

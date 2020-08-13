@@ -1,0 +1,222 @@
+{% load static %}
+{% include 'head.html' %}
+
+    <section class="home-slider owl-carousel pt-3">
+        <div class="slider-item">
+            <div class="overlay"></div>
+            <div class="container-fluid">
+                <div class="row slider-text align-items-center" data-scrollax-parent="true">
+                    <div class="col-md-8 wrap ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                        <h1 class="mb-4 mt-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                            PT. Ofisial Sertifikasi Harapan
+                        </h1>
+                        <p class="mb-4 mb-md-5 sub-p" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                            Lembaga Sertifikasi Kompetensi Teknik Ketenagalistrikan yang telah mendapatkan Akreditasi sebagai lembaga sertifikasi kompetensi.                            Pada tanggal 20 September 2019 PT OSHA telah ditunjuk oleh Menteri ESDM sebagai Lembaga Sertifikasi Kompetensi Tenaga Teknik dengan nomor 314 K/20/DJL.4/2019.
+                        </p>
+                    </div>
+                    <div class="col-md-3 ftco-animate">
+                        <img src="{% static 'images/logo.png' %}" style="display: block;
+                      margin-left: auto;
+                      margin-right: auto;
+                      width: 50%;" class=" image-logo" alt="Logo OSHA" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-item">
+            <div class="overlay"></div>
+            <div class="container-fluid">
+                <div class="row slider-text justified-content-center align-items-center" data-scrollax-parent="true">
+                    <div class="col-md-5 mx-auto text-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                        <p>
+                            Berusaha Memberi Pelayanan Terbaik
+                        </p>
+                        <h1 class="mb-3" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                            Sertifikasi Kompetensi
+                        </h1>
+                        <p>
+                            <a href="sertifikasi.html" class="btn text-dark font-weight-bold" style="background: #fff700;">Ajukan Sertifikasi</a>
+                        </p>
+                        <div class="d-block">
+                            <img src="{% static 'images/g1.jpg' %}" class="img-fluid" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-item">
+            <div class="overlay"></div>
+            <div class="container-fluid">
+                <div class="row slider-text justified-content-center align-items-center" data-scrollax-parent="true">
+                    <div class="col-md-6 mx-auto ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p>
+                                    Didukung oleh SDM yang berkompetensi
+                                </p>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="{% url 'tentang:profil' %}" class="btn text-dark font-weight-bold my-3" style="background: #fff700;">Lihat Profil</a>
+                            </div>
+                        </div>
+                        <div class="d-block">
+                            <img src="{% static 'images/g2.jpg' %}" class="img-fluid" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section my-4 py-4">
+        <div class="container">
+            <div class="row my-4 py-4">
+                <div class="col-md-12 text-center">
+                    <h2 class="font-weight-bold">Lihat Profil Osha</h2>
+                </div>
+            </div>
+            <div class="row my-4 py-4">
+                <div class="col-md-12 nav-link-wrap mb-3 pb-md-5 pb-sm-1 ftco-animate">
+                    <div class="nav ftco-animate nav-pills justify-content-center text-center" id="osha-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link active" id="osha-profil-tab" data-toggle="pill" href="#osha-profil" role="tab" aria-controls="osha-profil" aria-selected="true">
+                            Profil
+                        </a>
+                        <a class="nav-link" id="osha-visi-tab" data-toggle="pill" href="#osha-visi" role="tab" aria-controls="osha-visi" aria-selected="false">
+                            Visi
+                        </a>
+                        <a class="nav-link" id="osha-misi-tab" data-toggle="pill" href="#osha-misi" role="tab" aria-controls="osha-misi" aria-selected="false">
+                            Misi
+                        </a>
+                        <a class="nav-link" id="osha-legalitas-tab" data-toggle="pill" href="#osha-legalitas" role="tab" aria-controls="osha-legalitas" aria-selected="false">
+                            Legalitas
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-12 align-items-center ftco-animate fadeInUp ftco-animated">
+                    <div class="tab-content ftco-animate fadeInUp ftco-animated" id="osha-tabContent">
+                        <div class="tab-pane fade active show" id="osha-profil" role="tabpanel" aria-labelledby="osha-profil-tab">
+                            <div class="container d-md-flex">
+                                <div class="ml-md-5 align-self-center">
+                                    <h2 class="mb-4 text-center">Profil Osha</h2>
+                                    <p>
+                                        PT Ofisial Sertifikasi Harapan (OSHA) adalah sebuah perusahaan yang bergerak di bidang Distribusi Tenaga Listrik dan Pembangkitan Tenaga Listrik. Pada tanggal 20 September 2019 PT OSHA telah ditunjuk oleh Menteri ESDM sebagai Lembaga Sertifikasi Kompetensi Tenaga Teknik dengan nomor 314 K/20/DJL.4/2019.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="osha-visi" role="tabpanel" aria-labelledby="osha-visi-tab">
+                            <div class="container d-md-flex">
+                                <div class="ml-md-5 align-self-center">
+                                    <h2 class="mb-4 text-center">Visi Osha</h2>
+                                    <p class="text-uppercase">
+                                        "Diakui sebagai Lembaga Sertifikasi Kompetensi yang unggul, terpercaya dan diakui secara Nasional dan Internasional."
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="osha-misi" role="tabpanel" aria-labelledby="osha-misi-tab">
+                            <div class="container d-md-flex">
+                                <div class="ml-md-5 align-self-center">
+                                    <h2 class="mb-4 text-center">Misi Osha</h2>
+                                    <ul class="circle-bordered-list">
+                                        <li>1.  Melaksanakan Sertifikasi Kompetensi di sektor ketenagalistrikan yang mengutamakan mutu
+kompetensi tenaga teknik ketenagalistrikan di Pasar Kerja Nasional dan Internasional.</li>
+                                        <li>2.  Menjamin bahwa proses sertifikasi dilaksanakan dengan jujur, cepat, tepat, akurat dan efektif.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="osha-legalitas" role="tabpanel" aria-labelledby="osha-legalitas-tab">
+                            <div class="container d-md-flex">
+                                <div class="align-self-center">
+                                    <h2 class="mb-4 text-center">Legalitas Osha</h2>
+                                    <div class="container legalitas-slider owl-carousel">
+                                        <div class="item">
+                                            <img src="{% static 'images/legalitas/PT OSHA-02.jpg' %}">
+                                        </div>
+                                        <div class="item">
+                                            <img src="{% static 'images/legalitas/PT OSHA-04.jpg' %}">
+                                        </div>
+                                        <div class="item">
+                                            <img src="{% static 'images/legalitas/PT OSHA-06.jpg' %}">
+                                        </div>
+                                        <div class="item">
+                                            <img src="{% static 'images/legalitas/PT OSHA-08.jpg' %}">
+                                        </div>
+                                        <div class="item">
+                                            <img src="{% static 'images/legalitas/PT OSHA-10.jpg' %}">
+                                        </div>
+                                        <div class="item">
+                                            <img src="{% static 'images/legalitas/PT OSHA-12.jpg' %}">
+                                        </div>
+                                        <div class="item">
+                                            <img src="{% static 'images/legalitas/PT OSHA-14.jpg' %}">
+                                        </div>
+                                        <div class="item">
+                                            <img src="{% static 'images/legalitas/PT OSHA-16.jpg' %}">
+                                        </div>
+                                        <div class="item">
+                                            <img src="{% static 'images/legalitas/PT OSHA-18.jpg' %}">
+                                        </div>
+                                        <div class="item">
+                                            <img src="{% static 'images/legalitas/PT OSHA-20.jpg' %}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="ftco-section pt-0" style="background-color: blue;">
+        <div class="col-md-12 ftco-animate about-image">
+            <br><br><br><br>
+                    <img src="{% static 'images/proses.png' %}" class="img-fluid py-5" alt="Logo Osha" style="display: block;
+                      margin-left: auto;
+                      margin-right: auto;
+                      width: 50%;">
+                </div>
+    </section>
+
+    <section class="ftco-section pt-0">
+        <h2 class="font-weight-bold text-center my-4">Penanggung Jawab Teknik</h2>
+        <div class="container owl-carousel pj-slider">
+            <div class="team-item">
+                <div class="team-photo" style="background-image: url({% static 'images/avatar.png' %})"></div>
+                <div class="team-text">
+                    <h4>Afandy</h4>
+                    <p>Asesor Kompetensi Web Development</p>
+                </div>
+                <div class="team-social">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section pt-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="headline">
+                        <div class="headline-shadow">
+                            <h2 class="font-weight-bold text-center">Partner Kami</h2>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="brand-carousel owl-carousel">
+                        <div class="brand-item" style="background-image: url(http://ptskp.id/public/uploads/partner-1.jpg); "></div>
+                        <div class="brand-item" style="background-image: url({% static 'images/plnBatam.png' %}); display: block; "></div>
+                        <div class="brand-item" style="background-image: url({% static 'images/meb.png' %}); display: block;"></div>
+                        <div class="brand-item" style="background-image: url({% static 'images/atiga.png' %}); display: block;"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>    
+{% include 'footer.html' %}
