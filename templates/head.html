@@ -3,12 +3,14 @@
 <html lang="en">
 
 <head>
-    <title>PT. Official Sertifikasi Harapan (OSHA) | Beranda</title>
+    <title>PT. Ofisial Sertifikasi Harapan (OSHA) | Beranda</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/animate.css' %} ">
+    <link rel="stylesheet" href="{% static 'css/set.css' %} ">
     <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
     <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
@@ -17,6 +19,19 @@
 </head>
 
 <body>
+    {% url 'beranda' as dashboard %}
+{% url 'tentang:daftarAsesor' as daftarAsesor %}     
+{% url 'tentang:legalitas' as legalitas %}           
+{% url 'tentang:profil' as profil %}
+{% url 'tentang:struktur' as struktur %}
+{% url 'sertifikasi:alur' as alur %}
+{% url 'sertifikasi:proses' as proses %}
+{% url 'sertifikasi:regulasi' as regulasi %}
+{% url 'sertifikasi:ruang' as ruang %}
+{% url 'pengalamanKontakForm:pengalaman' as dokumentasi %}
+{% url 'pengalamanKontakForm:kontak' as kontak %}
+{% url 'pengalamanKontakForm:permohonan' as permohonan %}
+
     <nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light" style="background-color: white;">
         <div class="container">
             <a href="index.html p-2" style="flex-wrap: nowrap;">
@@ -29,10 +44,10 @@
             </button>
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item {% if request.get_full_path == dashboard %}active{% endif %}">
                         <a href="{% url 'beranda' %}" class="nav-link text-uppercase">Beranda</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown {% if request.get_full_path == profil or request.get_full_path == legalitas or request.get_full_path == struktur or request.get_full_path == daftarAsesor %}active{% endif %}" >
                         <a class="nav-link text-uppercase dropdown-toggle" data-toggle="dropdown">Tentang</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="{% url 'tentang:profil' %}">Sejarah Singkat</a>
@@ -41,7 +56,7 @@
                             <a class="dropdown-item" href="{% url 'tentang:daftarAsesor' %}">Daftar Asesor</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown {% if request.get_full_path == ruang or request.get_full_path == proses or request.get_full_path == alur or request.get_full_path == regulasi or request.get_full_path == permohonan %}active{% endif %}">
                         <a class="nav-link text-uppercase dropdown-toggle" data-toggle="dropdown">Sertifikasi</a>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="{% url 'sertifikasi:ruang' %}">Ruang Lingkup</a>
@@ -51,13 +66,13 @@
                             <a class="dropdown-item" href="{% url 'pengalamanKontakForm:permohonan' %}">Permohonan Sertifikasi</a>
                         </div>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {% if request.get_full_path == dokumentasi %}active{% endif %}" >
                         <a class="nav-link text-uppercase" href="{% url 'pengalamanKontakForm:pengalaman' %}">Pengalaman dan Dokumentasi</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item {% if request.get_full_path == kontak %}active{% endif %}">
                         <a href="{% url 'pengalamanKontakForm:kontak' %}" class="nav-link text-uppercase">Kontak</a>
                     </li>
-                    <li class="nav-item cta">
+                    <li class="nav-item cta {% if request.get_full_path == permohonan %}active{% endif %}">
                         <a href="{% url 'pengalamanKontakForm:permohonan' %}" class="btn btn-primary">
                             <span>Permohonan Sertifikasi</span>
                         </a>

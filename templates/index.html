@@ -1,6 +1,18 @@
 {% load static %}
 {% include 'head.html' %}
-
+{% url '' as dashboard %}
+{% url 'tentang:daftarAsesor' as daftar %}     
+{% url 'tentang:legalitas' as legalitas %}           
+{% url 'tentang:profil' as profil %}
+{% url 'tentang:struktur' as struktur %}
+{% url 'sertifikasi:alur' as alur %}
+{% url 'sertifikasi:permohonan' as permohonan %}
+{% url 'sertifikasi:proses' as proses %}
+{% url 'sertifikasi:regulasi' as regulasi %}
+{% url 'sertifikasi:ruang' as ruang %}
+{% url 'pengalamanKontakForm:dokumentasi' as dokumentasi %}
+{% url 'pengalamanKontakForm:kontak' as kontak %}
+{% url 'pengalamanKontakForm:permohonan' as permohonan %}
     <section class="home-slider owl-carousel pt-3">
         <div class="slider-item">
             <div class="overlay"></div>
@@ -11,7 +23,7 @@
                             PT. Ofisial Sertifikasi Harapan
                         </h1>
                         <p class="mb-4 mb-md-5 sub-p" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
-                            Lembaga Sertifikasi Kompetensi Teknik Ketenagalistrikan yang telah mendapatkan Akreditasi sebagai lembaga sertifikasi kompetensi.                            Pada tanggal 20 September 2019 PT OSHA telah ditunjuk oleh Menteri ESDM sebagai Lembaga Sertifikasi Kompetensi Tenaga Teknik dengan nomor 314 K/20/DJL.4/2019.
+                            PT Ofisial Sertifikasi Harapan (OSHA) adalah sebuah perusahaan yang bergerak di bidang Distribusi Tenaga Listrik dan Pembangkitan Tenaga Listrik. Pada tanggal 20 September 2019 PT OSHA telah ditunjuk oleh Menteri ESDM sebagai Lembaga Sertifikasi Kompetensi Tenaga Teknik dengan nomor 314 K/20/DJL.4/2019.
                         </p>
                     </div>
                     <div class="col-md-3 ftco-animate">
@@ -223,14 +235,12 @@ kompetensi tenaga teknik ketenagalistrikan di Pasar Kerja Nasional dan Internasi
             </div>
         </div>
     </section>
-<section class="ftco-section pt-0" style="">
-        <div class="col-md-12 ftco-animate about-image">
-            <br><br><br><br>
-                    <img src="{% static 'images/proses.png' %}" class="img-fluid py-5" alt="Logo Osha" style="display: block;
-                      margin-left: auto;
-                      margin-right: auto;
-                      width: 50%;">
-                </div>
+<section class="ftco-section">
+        <div class="container d-md-flex">
+            <div class="align-self-center mx-auto">
+                <img src="{% static 'images/proses_sertifikasi.png' %}">
+            </div>
+        </div>
     </section>
 
 
@@ -247,9 +257,11 @@ kompetensi tenaga teknik ketenagalistrikan di Pasar Kerja Nasional dan Internasi
                     </div>
                     <div class="brand-carousel owl-carousel">
                         <div class="brand-item" style="background-image: url(http://ptskp.id/public/uploads/partner-1.jpg); "></div>
-                        <div class="brand-item" style="background-image: url({% static 'images/plnBatam.png' %}); display: block; "></div>
-                        <div class="brand-item" style="background-image: url({% static 'images/meb.png' %}); display: block;"></div>
-                        <div class="brand-item" style="background-image: url({% static 'images/atiga.png' %}); display: block;"></div>
+                        <img src="{% static 'images/plnBatam.png'%}" style="margin-left: 20px;">
+                        <img src="{% static 'images/meb.png' %}" style="margin-left: 90px;">
+                        <img src="{% static 'images/atiga.png' %}" style="margin-left: 160px;">
+                        <img src="{% static 'images/logo1.jpg' %}" style="margin-left: 230px;">
+                        <img src="{% static 'images/logo2.jpg' %}" style="">
                     </div>
 
                 </div>
