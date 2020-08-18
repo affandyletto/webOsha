@@ -12222,6 +12222,10 @@ textarea.form-control {
     color:white;
 }
 
+.gallery img:hover{
+    transform:scale(1.1);
+}
+
 .scope-list {
     margin-left: 70px;
 }

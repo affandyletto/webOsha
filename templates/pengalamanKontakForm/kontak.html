@@ -1,6 +1,7 @@
 {% load static %}
 {% include 'head.html' %}
-    <section class="home-slider owl-carousel">
+   <section class="home-slider owl-carousel" style="background-image: url('{% static 'images/sejarah.jpg' %}'); 
+        background-size: cover; background-position: center;">
         <div class="slider-item bread-item" data-stellar-background-ratio="0.5">
             <div class="overlay"></div>
             <div class="container-fluid">
@@ -24,41 +25,53 @@
         <div class="container">
             <div class="row d-flex mb-5 contact-info">
                 <div class="col-md-12 mb-4">
+                    {% if messages %}
+                            <ul class="messages">
+                            {% for message in messages %}
+                            <li>
+                                <div class="alert alert-success"><strong>{{ message }}</strong></div>
+                            </li>
+                            {% endfor %}
+                            </ul>
+                        {% endif %}
                     <h2 class="h4">Informasi Kontak</h2>
                     <p></p>
                 </div>
             </div>
             <div class="row block-9">
                 <div class="col-md-8 pr-md-5">
-                    <form action="#" method="POST">
+
+                    <form action="" method="POST">
+                        {% csrf_token %}
                         <div class="form-row">
                             <div class="col-md my-3">
                                 <label>Nama Lengkap</label>
-                                <input type="text" class="form-control">
+                                <input type="text" name="nama" class="form-control">
                             </div>
                             <div class="col-md my-3">
                                 <label>Email</label>
-                                <input type="email" class="form-control">
+                                <input type="email" name="email" class="form-control">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-md my-3">
                                 <label>No. Handphone</label>
-                                <input type="tel" class="form-control">
+                                <input type="tel" name="telp" class="form-control">
                             </div>
                             <div class="col-md my-3">
                                 <label>Kota</label>
-                                <input type="text" class="form-control">
+                                <input type="text" name="kota" class="form-control">
                             </div>
                         </div>
                         <div class="form-group my-3">
                             <label>Isi Pesan</label>
-                            <textarea cols="30" rows="7" class="form-control"></textarea>
+                            <textarea name= "isi" cols="30" rows="7" class="form-control"></textarea>
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary py-3 px-5">Kirim Pesan</button>
                         </div>
                     </form>
+
                 </div>
                 <div class="col-md-4 my-4">
                     <h3 class="font-weight-bold">Kantor Pusat</h3>

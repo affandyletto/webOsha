@@ -71,6 +71,7 @@
     </footer>
 	<script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.0/js/lightbox.js"></script>
     <script src="{% static 'js/popper.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
@@ -115,27 +116,23 @@
                 }
             });
             $('.brand-carousel').owlCarousel({
-                loop: false,
-                autoplay: true,
-                autoplayHoverPause: true,
-                margin: 30,
-                nav: true,
-                navText: ["<i class='fa fa-caret-left'></i>", "<i class='fa fa-caret-right'></i>"],
-                responsive: {
-                    0: {
-                        items: 2 },
-                    520: {
-                        items: 3
+                  loop:false,
+                  margin:10,
+                  autoplay:true,
+                  responsive:{
+                    0:{
+                      items:1
                     },
-                    750: {
-                        items: 4
+                    600:{
+                      items:3
                     },
-                    1000: {
-                        items: 5
+                    1000:{
+                      items:5
                     }
-                }
-            });
-        })
+                  }
+                })
+                            });
+    
     </script>
 </body>
 

@@ -13,7 +13,9 @@
 {% url 'pengalamanKontakForm:dokumentasi' as dokumentasi %}
 {% url 'pengalamanKontakForm:kontak' as kontak %}
 {% url 'pengalamanKontakForm:permohonan' as permohonan %}
-    <section class="home-slider owl-carousel pt-3">
+    <section class="home-slider owl-carousel pt-3" style="background-image: url('{% static 'images/ujiTT3/1 low.jpg' %}'); 
+        background-size: cover;
+    ">
         <div class="slider-item">
             <div class="overlay"></div>
             <div class="container-fluid">
@@ -144,6 +146,15 @@ kompetensi tenaga teknik ketenagalistrikan di Pasar Kerja Nasional dan Internasi
                                     <h2 class="mb-4 text-center">Legalitas Osha</h2>
                                     <div class="container legalitas-slider owl-carousel">
                                         <div class="item">
+                                            <img src="{% static 'images/legalitas/1.jpg' %}">
+                                        </div>
+                                        <div class="item">
+                                            <img src="{% static 'images/legalitas/2.jpg' %}">
+                                        </div>
+                                        <div class="item">
+                                            <img src="{% static 'images/legalitas/3.jpg' %}">
+                                        </div>
+                                        <div class="item">
                                             <img src="{% static 'images/legalitas/PT OSHA-02.jpg' %}">
                                         </div>
                                         <div class="item">
@@ -235,16 +246,13 @@ kompetensi tenaga teknik ketenagalistrikan di Pasar Kerja Nasional dan Internasi
             </div>
         </div>
     </section>
-<section class="ftco-section">
+    <section class="ftco-section">
         <div class="container d-md-flex">
             <div class="align-self-center mx-auto">
                 <img src="{% static 'images/proses_sertifikasi.png' %}">
             </div>
         </div>
     </section>
-
-
-
     <section class="ftco-section pt-0">
         <div class="container">
             <div class="row">
@@ -255,13 +263,25 @@ kompetensi tenaga teknik ketenagalistrikan di Pasar Kerja Nasional dan Internasi
                             <p></p>
                         </div>
                     </div>
-                    <div class="brand-carousel owl-carousel">
-                        <div class="brand-item" style="background-image: url(http://ptskp.id/public/uploads/partner-1.jpg); "></div>
-                        <img src="{% static 'images/plnBatam.png'%}" style="margin-left: 20px;">
-                        <img src="{% static 'images/meb.png' %}" style="margin-left: 90px;">
-                        <img src="{% static 'images/atiga.png' %}" style="margin-left: 160px;">
-                        <img src="{% static 'images/logo1.jpg' %}" style="margin-left: 230px;">
-                        <img src="{% static 'images/logo2.jpg' %}" style="">
+                    <div class="brand-carousel section-padding owl-carousel">
+                      <div class="single-logo">
+                        <img src="http://ptskp.id/public/uploads/partner-1.jpg" alt="">
+                      </div>
+                      <div class="single-logo">
+                        <img src="{% static 'images/logo1.jpg' %}" alt="">
+                      </div>
+                      <div class="single-logo">
+                        <img src="{% static 'images/plnBatam.png'%}" alt="">
+                      </div>
+                      <div class="single-logo">
+                        <img src="{% static 'images/meb.png' %}" alt="">
+                      </div>
+                      <div class="single-logo">
+                        <img src="{% static 'images/atiga.png' %}" alt="">
+                      </div>
+                      <div class="single-logo">
+                        <img src="{% static 'images/logo2.jpg' %}" alt="">
+                      </div>                      
                     </div>
 
                 </div>

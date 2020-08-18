@@ -4,12 +4,12 @@ from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls.static import static
 from django.urls import re_path, include
-from .views import pengalamanView,permohonanView,kontakView
+from .views import pengalamanView,permohonanView,kontak
 
 app_name="pengalamanKontakForm"
 urlpatterns=[
 	path('pengalaman',pengalamanView.as_view(),name="pengalaman"),
-	path('kontak',kontakView.as_view(),name="kontak"),
+	path('kontak',kontak,name="kontak"),
 	path('permohonan',permohonanView.as_view(),name="permohonan"),
 ]
 if settings.DEBUG:
