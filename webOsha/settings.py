@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'pengalamanKontakForm',
     'sertifikasi',
     'tentang',
-    'django_sass',
 ]
 
 MIDDLEWARE = [
