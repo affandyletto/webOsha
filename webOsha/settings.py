@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'pengalamanKontakForm',
     'sertifikasi',
+    'import_export',
     'tentang',
+    'imagekit',
+    'sorl.thumbnail',
 ]
 
 MIDDLEWARE = [
@@ -51,7 +54,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
 ROOT_URLCONF = 'webOsha.urls'
 
 TEMPLATES = [

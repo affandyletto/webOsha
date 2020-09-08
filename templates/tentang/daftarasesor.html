@@ -31,6 +31,7 @@
             <div class="row ftco-animate testimony-section">
                 <div class="col-md-12">
                     <div class="carousel-testimony owl-carousel ftco-owl">
+                        {% for a in sesuatu %}
                         <div class="item">
                             <div class="testimony-wrap p-4 pb-5">
                                 <div class="user-img mb-5" style="background-image: url(assets/images/avatar.png)">
@@ -39,100 +40,23 @@
                                     </span>
                                 </div>
                                 <div class="text">
-                                    <p class="mb-5">Bidang Distribusi Tenaga Listrik Sub Bidang Pemeliharaan, Konsultasi, Pemeriksaan & Pengujian, Pembangunan & Pemasangan, Pengoperasian</p>
-                                    <p class="name">Roberton Manurung</p>
+                                    <p class="mb-5">
+                                        {% for b in a.subBidang.all %}
+                                            {{b}}
+                                        {% endfor %}
+                                    </p>
+                                    <p class="name">{{a.namaAsesor}}</p>
                                     <span class="position">PJT dan Usulan PJT</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="testimony-wrap p-4 pb-5">
-                                <div class="user-img mb-5" style="background-image: url(assets/images/avatar.png)">
-                                    <span class="quote d-flex align-items-center justify-content-center">
-                                        <i class="icon-quote-left"></i>
-                                    </span>
-                                </div>
-                                <div class="text">
-                                    <p class="mb-5">Bidang Distribusi Tenaga Listrik Sub Bidang Pemeriksaan & Pengujian, Pembangunan & Pemasangan</p>
-                                    <p class="name">Arief Nur Hidayat</p>
-                                    <span class="position">PJT</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimony-wrap p-4 pb-5">
-                                <div class="user-img mb-5" style="background-image: url(assets/images/avatar.png)">
-                                    <span class="quote d-flex align-items-center justify-content-center">
-                                        <i class="icon-quote-left"></i>
-                                    </span>
-                                </div>
-                                <div class="text">
-                                    <p class="mb-5">Bidang Distribusi Tenaga Listrik Sub Bidang Pemeliharaan, Konsultasi, Pemeriksaan & Pengujian, Pembangunan & Pemasangan, Pengoperasian</p>
-                                    <p class="name">Sulistyono</p>
-                                    <span class="position">Usulan PJT</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimony-wrap p-4 pb-5">
-                                <div class="user-img mb-5" style="background-image: url(assets/images/avatar.png)">
-                                    <span class="quote d-flex align-items-center justify-content-center">
-                                        <i class="icon-quote-left"></i>
-                                    </span>
-                                </div>
-                                <div class="text">
-                                    <p class="mb-5">Bidang Distribusi Tenaga Listrik Sub Bidang Konsultasi, Pemeriksaan & Pengujian, Pembangunan & Pemasangan, Pengoperasian</p>
-                                    <p class="name">Herastopo Yuli Prasetyo</p>
-                                    <span class="position">TT SBU, Usulan TT SBU</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimony-wrap p-4 pb-5">
-                                <div class="user-img mb-5" style="background-image: url(assets/images/avatar.png)">
-                                    <span class="quote d-flex align-items-center justify-content-center">
-                                        <i class="icon-quote-left"></i>
-                                    </span>
-                                </div>
-                                <div class="text">
-                                    <p class="mb-5">Bidang Distribusi Tenaga Listrik Sub Bidang Pemeliharaan, Konsultasi, Pemeriksaan & Pengujian, Pembangunan & Pemasangan, Pengoperasian</p>
-                                    <p class="name">Irkham Tamtomo</p>
-                                    <span class="position">TT SBU, Usulan TT SBU, TT Non SBU</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimony-wrap p-4 pb-5">
-                                <div class="user-img mb-5" style="background-image: url(assets/images/avatar.png)">
-                                    <span class="quote d-flex align-items-center justify-content-center">
-                                        <i class="icon-quote-left"></i>
-                                    </span>
-                                </div>
-                                <div class="text">
-                                    <p class="mb-5">Bidang Distribusi Tenaga Listrik Sub Bidang Pemeliharaan, Konsultasi, Pemeriksaan & Pengujian, Pembangunan & Pemasangan, Pengoperasian</p>
-                                    <p class="name">Johnny Palma</p>
-                                    <span class="position">TT SBU, Usulan TT Non SBU</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="testimony-wrap p-4 pb-5">
-                                <div class="user-img mb-5" style="background-image: url(assets/images/avatar.png)">
-                                    <span class="quote d-flex align-items-center justify-content-center">
-                                        <i class="icon-quote-left"></i>
-                                    </span>
-                                </div>
-                                <div class="text">
-                                    <p class="mb-5">Bidang Distribusi Tenaga Listrik Sub Bidang Pemeriksaan & Pengujian, Pembangunan & Pemasangan</p>
-                                    <p class="name">Gunawan</p>
-                                    <span class="position">TT SBU</span>
-                                </div>
+                        {% endfor %}
+
+
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
+                </div>            
     </section>
 
 <section class="ftco-section">
@@ -150,6 +74,7 @@
             <div class="table-responsive">
                 <table class="table border">
                     <thead class="thead-primary">
+                        <h2>BIDANG DISTRIBUSI TENAGA LISTRIK</h2>
                         <tr>
                             <th>No</th>
                             <th>Nama</th>
@@ -158,114 +83,55 @@
                         </tr>
                     </thead>
                     <tbody class="text-left">
+                        {% for a in sesuatu %}
                         <tr>
-                            <td rowspan="2">1</td>
-                            <td rowspan="2">ROBERTO MANURUNG</td>
-                            <td rowspan="2">PJT</td>
-                            <td>1.PEMELIHARAAN</td>
+                            <td >{{ forloop.counter }}</td>
+                            <td >{{a.namaAsesor}}</td>
+                            <td >{% for b in a.jabatan.all %}
+                                {{b}}<br><br><br>
+                                {% endfor %}
+                            </td>
+                            <td >{% for b in a.subBidang.all %}
+                                <li>{{b}}</li><br>
+                                {% endfor %}
+                            </td>
                         </tr>
-                        <tr>
-
-                            <td>2. KONSULTASI<br>3. PEMERIKSAAN & PENGUJIAN <br> 4. PEMBANGUNAN & PEMASANGAN <br> 5. PENGOPERASIAN </td>
-                        </tr>
-                        <tr>
-                            <td >2</td>
-                            <td >ARIEF NUR HIDAYAT</td>
-                            <td>PJT</td>
-                            <td>1. PEMERIKSAAN & PENGUJIAN <br> 2. PEMBANGUNAN & PEMASANGAN <br></td>
-                        </tr>
+                        {% endfor %}
                         
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 ftco-animate">
+            <div class="table-responsive">
+                <table class="table border">
+                    <thead class="thead-primary">
+                        <h2>BIDANG PEMBANGKIT TENAGA LISTRIK</h2>
                         <tr>
-                            <td >3</td>
-                            <td >SULISTYONO</td>
-                            <td>PJT</td>
-                            <td>1. KONSULTASI<br>2. PEMERIKSAAN & PENGUJIAN <br> 3. PEMBANGUNAN & PEMASANGAN <br> 4. PENGOPERASIAN</td>
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>Jabatan</th>
+                            <th>Sub Bidang</th>
                         </tr>
-
+                    </thead>
+                    <tbody class="text-left">
+                        {% for a in sesuatuAja %}
                         <tr>
-                            <td rowspan="2">4</td>
-                            <td rowspan="2">HERASTOPO YULI PRASETYO</td>
-                            <td rowspan="2">TT SBU</td>
-                            <td>1.PEMELIHARAAN</td>
+                            <td >{{ forloop.counter }}</td>
+                            <td >{{a.namaAsesor}}</td>
+                            <td >{% for b in a.jabatan.all %}
+                                {{b}}<br><br><br>
+                                {% endfor %}
+                            </td>
+                            <td >{% for b in a.subBidang.all %}
+                                <li>{{b}}</li><br>
+                                {% endfor %}
+                            </td>
                         </tr>
-                        <tr>
-                            <td>2. KONSULTASI<br>3. PEMERIKSAAN & PENGUJIAN <br> 4. PEMBANGUNAN & PEMASANGAN <br> 5. PENGOPERASIAN </td>
-                        </tr>
-
-                        <tr>
-                            <td rowspan="3">5</td>
-                            <td rowspan="3">IRKHAM TAMTOMO</td>
-                            <td rowspan="2">TT SBU</td>
-                            <td>1. PEMELIHARAAN</td>
-                        </tr>
-                        <tr>
-                            <td>2. KONSULTASI<br>3. PENGOPERASIAN <br></td>                    
-                        </tr>
-                        <tr>
-                            <td>TT NON SBU</td>
-                            <td>4. PEMERIKSAAN & PENGUJIAN <br> 5. PEMBANGUNAN & PEMASANGAN</td>                  
-                        </tr>
-
-                        <tr>
-                            <td rowspan="2">6</td>
-                            <td rowspan="2">JOHNNY PALMA</td>
-                            <td>TT SBU</td>
-                            <td>1.  PEMERIKSAAN & PENGUJIAN<br>2.  PEMBANGUNAN & PEMASANGAN</td>
-                        </tr>
-                        <tr>
-                            <td>TT NON SBU</td>
-                            <td>3.  KONSULTANSI<br>4.  PEMELIHARAAN<br>5.  PENGOPERASIAN</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>GUNAWAN</td>
-                            <td>TT SBU</td>
-                            <td>1. PEMERIKSAAN & PENGUJIAN <br> 2. PEMBANGUNAN & PEMASANGAN</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2">8</td>
-                            <td rowspan="2">MOHAMAD GUFRON</td>
-                            <td>TT SBU</td>
-                            <td>1.  PEMELIHARAAN <br>2.  PENGOPERASIAN</td>
-                        </tr>
-                        <tr>
-                            <td>TT NON SBU</td>
-                            <td>3.  KONSULTANSI<br>4.  PEMERIKSAAN & PENGUJIAN <br>5.  PEMBANGUNAN & PEMASANGAN</td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2">9</td>
-                            <td rowspan="2">SALMIN LETTO</td>
-                            <td rowspan="2">TT NON SBU</td>
-                            <td>1.  PEMERIKSAAN & PENGUJIAN <br>2.  PEMBANGUNAN & PEMASANGAN</td>
-                        </tr>
-                        <tr>
-                            <td>1.  KONSULTANSI</td>
-                        </tr>
-
-                        <tr>
-                            <td rowspan="2">10</td>
-                            <td rowspan="2">UNTUNG PRIHADI</td>
-                            <td rowspan="2">TT NON SBU</td>
-                            <td>1.  PEMBANGUNAN & PEMASANGAN <br>2.  PEMERIKSAAN & PENGUJIAN<br>3. PEMELIHARAAN</td>
-                        </tr>
-                        <tr>
-                            <td>1.  KONSULTANSI<br>2.  PEMELIHARAAN <br></td>
-                        </tr>
-                        <tr>
-                            <td rowspan="2">11</td>
-                            <td rowspan="2">SAI'IN</td>
-                            <td rowspan="2">TT NON SBU</td>
-                            <td>1.  PEMBANGUNAN & PEMASANGAN <br>2.  PEMERIKSAAN & PENGUJIAN<br>3. PEMELIHARAAN</td>
-                        </tr>
-                        <tr>
-                            <td>1.  KONSULTANSI<br>2.  PENGOPERASIAN <br></td>
-                        </tr>
-                        <tr>
-                            <td>12</td>
-                            <td>ARDI NURSANTO</td>
-                            <td>TT NON SBU</td>
-                            <td>1. PEMELIHARAAN <br> 2. PEMERIKSAAN & PENGUJIAN<br>3. PEMBANGUNAN & PEMASANGAN</td>
-                        </tr>
+                        {% endfor %}
+                        
                     </tbody>
                 </table>
             </div>

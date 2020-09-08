@@ -1,4 +1,5 @@
 {% load static %}
+{% load imagekit %}
 {% include 'head.html' %}
 {% url '' as dashboard %}
 {% url 'tentang:daftarAsesor' as daftar %}     
@@ -13,9 +14,10 @@
 {% url 'pengalamanKontakForm:dokumentasi' as dokumentasi %}
 {% url 'pengalamanKontakForm:kontak' as kontak %}
 {% url 'pengalamanKontakForm:permohonan' as permohonan %}
+
     <section class="home-slider owl-carousel pt-3" style="background-image: url('{% static 'images/ujiTT3/1 low.jpg' %}'); 
         background-size: cover;
-    ">
+    ">    
         <div class="slider-item">
             <div class="overlay"></div>
             <div class="container-fluid">
@@ -25,9 +27,12 @@
                             PT. Ofisial Sertifikasi Harapan
                         </h1>
                         <p class="mb-4 mb-md-5 sub-p" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
-                            PT Ofisial Sertifikasi Harapan (OSHA) adalah sebuah perusahaan yang bergerak di bidang Distribusi Tenaga Listrik dan Pembangkitan Tenaga Listrik. Pada tanggal 20 September 2019 PT OSHA telah ditunjuk oleh Menteri ESDM sebagai Lembaga Sertifikasi Kompetensi Tenaga Teknik dengan nomor 314 K/20/DJL.4/2019.
+                            {% for a in profile %}
+                                {{a.text}}
+                            {% endfor %}
                         </p>
                     </div>
+
                     <div class="col-md-3 ftco-animate">
                         <img src="{% static 'images/logo.png' %}" style="display: block;
                       margin-left: auto;
@@ -37,6 +42,7 @@
                 </div>
             </div>
         </div>
+        
         <div class="slider-item">
             <div class="overlay"></div>
             <div class="container-fluid">
@@ -81,7 +87,7 @@
             </div>
         </div>
     </section>
-
+    
     <section class="ftco-section my-4 py-4">
         <div class="container">
             <div class="row my-4 py-4">
@@ -112,9 +118,9 @@
                             <div class="container d-md-flex">
                                 <div class="ml-md-5 align-self-center">
                                     <h2 class="mb-4 text-center">Profil Osha</h2>
-                                    <p>
-                                        PT Ofisial Sertifikasi Harapan (OSHA) adalah sebuah perusahaan yang bergerak di bidang Distribusi Tenaga Listrik dan Pembangkitan Tenaga Listrik. Pada tanggal 20 September 2019 PT OSHA telah ditunjuk oleh Menteri ESDM sebagai Lembaga Sertifikasi Kompetensi Tenaga Teknik dengan nomor 314 K/20/DJL.4/2019.
-                                    </p>
+                                    {% for a in profile %}
+                                    <p>{{a.text}}</p>
+                                    {% endfor %}
                                 </div>
                             </div>
                         </div>
@@ -123,7 +129,9 @@
                                 <div class="ml-md-5 align-self-center">
                                     <h2 class="mb-4 text-center">Visi Osha</h2>
                                     <p class="text-uppercase">
-                                        "Diakui sebagai Lembaga Sertifikasi Kompetensi yang unggul, terpercaya dan diakui secara Nasional dan Internasional."
+                                        {% for a in visi %}
+                                        {{a.visi}}
+                                        {% endfor %}
                                     </p>
                                 </div>
                             </div>
@@ -133,9 +141,9 @@
                                 <div class="ml-md-5 align-self-center">
                                     <h2 class="mb-4 text-center">Misi Osha</h2>
                                     <ul class="circle-bordered-list">
-                                        <li>1.  Melaksanakan Sertifikasi Kompetensi di sektor ketenagalistrikan yang mengutamakan mutu
-kompetensi tenaga teknik ketenagalistrikan di Pasar Kerja Nasional dan Internasional.</li>
-                                        <li>2.  Menjamin bahwa proses sertifikasi dilaksanakan dengan jujur, cepat, tepat, akurat dan efektif.</li>
+                                        {% for a in misi %}
+                                        <li>{{a.misi}}</li>
+                                        {% endfor %}
                                     </ul>
                                 </div>
                             </div>
@@ -145,45 +153,11 @@ kompetensi tenaga teknik ketenagalistrikan di Pasar Kerja Nasional dan Internasi
                                 <div class="align-self-center">
                                     <h2 class="mb-4 text-center">Legalitas Osha</h2>
                                     <div class="container legalitas-slider owl-carousel">
-                                        <div class="item">
-                                            <img src="{% static 'images/legalitas/1.jpg' %}">
-                                        </div>
-                                        <div class="item">
-                                            <img src="{% static 'images/legalitas/2.jpg' %}">
-                                        </div>
-                                        <div class="item">
-                                            <img src="{% static 'images/legalitas/3.jpg' %}">
-                                        </div>
-                                        <div class="item">
-                                            <img src="{% static 'images/legalitas/PT OSHA-02.jpg' %}">
-                                        </div>
-                                        <div class="item">
-                                            <img src="{% static 'images/legalitas/PT OSHA-04.jpg' %}">
-                                        </div>
-                                        <div class="item">
-                                            <img src="{% static 'images/legalitas/PT OSHA-06.jpg' %}">
-                                        </div>
-                                        <div class="item">
-                                            <img src="{% static 'images/legalitas/PT OSHA-08.jpg' %}">
-                                        </div>
-                                        <div class="item">
-                                            <img src="{% static 'images/legalitas/PT OSHA-10.jpg' %}">
-                                        </div>
-                                        <div class="item">
-                                            <img src="{% static 'images/legalitas/PT OSHA-12.jpg' %}">
-                                        </div>
-                                        <div class="item">
-                                            <img src="{% static 'images/legalitas/PT OSHA-14.jpg' %}">
-                                        </div>
-                                        <div class="item">
-                                            <img src="{% static 'images/legalitas/PT OSHA-16.jpg' %}">
-                                        </div>
-                                        <div class="item">
-                                            <img src="{% static 'images/legalitas/PT OSHA-18.jpg' %}">
-                                        </div>
-                                        <div class="item">
-                                            <img src="{% static 'images/legalitas/PT OSHA-20.jpg' %}">
-                                        </div>
+                                        {% for b in sesuatu %}
+                                        <div class="item" width="100">
+                                            <img src="{{b.smart.url}}">
+                                        </div>        
+                                        {% endfor %}
                                     </div>
                                 </div>
                             </div>
@@ -193,6 +167,21 @@ kompetensi tenaga teknik ketenagalistrikan di Pasar Kerja Nasional dan Internasi
             </div>
         </div>
     </section>
+
+    <section class="ftco-section pt-0" style="background: #45cafc;
+    background: -moz-linear-gradient(40deg, #45cafc, #303f9f);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, #45cafc), color-stop(100%, #9a51ff));
+    background: -webkit-linear-gradient(40deg, #45cafc, #303f9f);
+    background: -o-linear-gradient(40deg, #45cafc, #303f9f);
+    background: -ms-linear-gradient(40deg, #45cafc, #303f9f);
+    background: linear-gradient(40deg, #45cafc, #303f9f);">
+        <div class="container d-md-flex">
+            <div class="align-self-center mx-auto">
+                <img src="{% static 'images/maklumat.JPG' %}" style="margin-top: 170px;">
+            </div>
+        </div>
+    </section>
+
 <section class="ftco-section pt-0">
         <div class="container d-md-flex">
             <div class="align-self-center">
@@ -246,42 +235,34 @@ kompetensi tenaga teknik ketenagalistrikan di Pasar Kerja Nasional dan Internasi
             </div>
         </div>
     </section>
-    <section class="ftco-section">
+    <section class="ftco-section" style=" background: #45cafc;
+    background: -moz-linear-gradient(40deg, #45cafc, #303f9f);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, #45cafc), color-stop(100%, #9a51ff));
+    background: -webkit-linear-gradient(40deg, #45cafc, #303f9f);
+    background: -o-linear-gradient(40deg, #45cafc, #303f9f);
+    background: -ms-linear-gradient(40deg, #45cafc, #303f9f);
+    background: linear-gradient(40deg, #45cafc, #303f9f);">
         <div class="container d-md-flex">
             <div class="align-self-center mx-auto">
                 <img src="{% static 'images/proses_sertifikasi.png' %}">
             </div>
         </div>
     </section>
-    <section class="ftco-section pt-0">
+    <section class="ftco-section pt-0" style="margin-top: 170px;">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="headline">
                         <div class="headline-shadow">
-                            <h2 class="font-weight-bold text-center">Partner Kami</h2>
-                            <p></p>
+                            <h2 class="font-weight-bold text-center">Partner Kami</h2><br>
                         </div>
                     </div>
                     <div class="brand-carousel section-padding owl-carousel">
+                      {% for a in partner %}
                       <div class="single-logo">
-                        <img src="http://ptskp.id/public/uploads/partner-1.jpg" alt="">
+                        <img src="{{a.image.url}}" style="width: 70%; height: 70%" >
                       </div>
-                      <div class="single-logo">
-                        <img src="{% static 'images/logo1.jpg' %}" alt="">
-                      </div>
-                      <div class="single-logo">
-                        <img src="{% static 'images/plnBatam.png'%}" alt="">
-                      </div>
-                      <div class="single-logo">
-                        <img src="{% static 'images/meb.png' %}" alt="">
-                      </div>
-                      <div class="single-logo">
-                        <img src="{% static 'images/atiga.png' %}" alt="">
-                      </div>
-                      <div class="single-logo">
-                        <img src="{% static 'images/logo2.jpg' %}" alt="">
-                      </div>                      
+                      {% endfor %}     
                     </div>
 
                 </div>

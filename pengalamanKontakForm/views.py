@@ -4,12 +4,29 @@ from django.views.generic import ListView,RedirectView,DetailView,UpdateView,Cre
 from django.core.mail import send_mail,EmailMessage
 from django.conf import settings
 from django.contrib import messages
+from .models import judulGallery,jenisGallery,dokumentasi
 
 class pengalamanView(TemplateView):
 	template_name="pengalamanKontakForm/dokumentasi.html"
 
+def pengalamanView(request):
+	foto=[]
+	judul=judulGallery.objects.all()
+	jenis=jenisGallery.objects.all()
+	for a in judul:
+		z=dokumentasi.objects.filter(judul__in=judulGallery.objects.filter(judul=a.judul))
+		foto.append(z)
+
+	print(foto[0])
+	
+	context={
+
+	}
+	return render(request,'pengalamanKontakForm/dokumentasi.html',context)
+
 class permohonanView(TemplateView):
 	template_name="pengalamanKontakForm/permohonan.html"
+
 def kontak(request):
 	if request.method=="POST":
 		nama=request.POST['nama']		

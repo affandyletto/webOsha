@@ -26,57 +26,28 @@
             <div class="align-self-center mx-auto">
                 <h2 class="my-4 text-center font-weight-bold">Dewan Komisaris</h2>
                 <div class="row py-4">
-                    <div class="col-md-4 mb-4">
+                    {% for a in komisaris %}
+                    <div class="col-md-4 mb-4">                        
                         <div class="row">
                             <div class="col-md-12 text-center">
-                                <img src="assets/images/avatar.png" alt="" width="200px" class="img-fluid rounded-circle" />
+                                {% if a.smart %}
+                                <img src="{{a.smart.url}}" alt="" width="200px" class="img-fluid rounded-circle" />
+                                {% endif %}
+                                
                             </div>
                             <div class="col-md-12 text-center">
                                 <div class="pt-2">
                                     <h5 class="mt-4 font-weight-bold mb-0">
-                                        Untung Prihadi
+                                        {{a.nama}}
                                     </h5>
                                     <h6 class="subtitle mb-3">
-                                        Komisaris Utama
+                                        {{a.keterangan}}
                                     </h6>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <img src="assets/images/avatar.png" alt="" width="200px" class="img-fluid rounded-circle" />
-                            </div>
-                            <div class="col-md-12 text-center">
-                                <div class="pt-2">
-                                    <h5 class="mt-4 font-weight-bold mb-0">
-                                        Sai'in
-                                    </h5>
-                                    <h6 class="subtitle mb-3">
-                                        Komisaris
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <img src="assets/images/avatar.png" alt="" width="200px" class="img-fluid rounded-circle" />
-                            </div>
-                            <div class="col-md-12 text-center">
-                                <div class="pt-2">
-                                    <h5 class="mt-4 font-weight-bold mb-0">
-                                        Ny. Maulida Isnaini 
-                                    </h5>
-                                    <h6 class="subtitle mb-3">
-                                        Komisaris
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -87,57 +58,27 @@
             <div class="align-self-center mx-auto">
                 <h2 class="my-4 text-center font-weight-bold">Jajaran Direksi</h2>
                 <div class="row py-4">
+                    {% for a in direksi %}
                     <div class="col-md-4 mb-4">
                         <div class="row">
                             <div class="col-md-12 text-center">
-                                <img src="assets/images/avatar.png" alt="" width="200px" class="img-fluid rounded-circle" />
+                                {% if a.smart %}
+                                <img src="{{a.smart.url}}" alt="" width="200px" class="img-fluid rounded-circle" />
+                                {% endif %}
                             </div>
                             <div class="col-md-12 text-center">
                                 <div class="pt-2">
                                     <h5 class="mt-4 font-weight-bold mb-0">
-                                        Salmin Letto
+                                        {{a.nama}}
                                     </h5>
                                     <h6 class="subtitle mb-3">
-                                        Direktur Utama
+                                        {{a.keterangan}}
                                     </h6>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <img src="assets/images/avatar.png" alt="" width="200px" class="img-fluid rounded-circle" />
-                            </div>
-                            <div class="col-md-12 text-center">
-                                <div class="pt-2">
-                                    <h5 class="mt-4 font-weight-bold mb-0">
-                                        Sulistyono
-                                    </h5>
-                                    <h6 class="subtitle mb-3">
-                                        Direktur Teknik
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <img src="assets/images/avatar.png" alt="" width="200px" class="img-fluid rounded-circle" />
-                            </div>
-                            <div class="col-md-12 text-center">
-                                <div class="pt-2">
-                                    <h5 class="mt-4 font-weight-bold mb-0">
-                                        Roberton Manurung
-                                    </h5>
-                                    <h6 class="subtitle mb-3">
-                                        Direktur Operasional
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -148,142 +89,27 @@
             <div class="align-self-center mx-auto">
                 <h2 class="my-4 text-center font-weight-bold">Bidang Distribusi</h2>
                 <div class="row py-4">
+                    {% for a in distribusi %}
                     <div class="col-md-3 mb-4">
                         <div class="row">
                             <div class="col-md-12 text-center">
-                                <img src="assets/images/avatar.png" alt="" width="200px" class="img-fluid rounded-circle" />
+                                {% if a.smart %}
+                                <img src="{{a.smart.url}}" alt="" width="200px" class="img-fluid rounded-circle" />
+                                {% endif %}
                             </div>
                             <div class="col-md-12 text-center">
                                 <div class="pt-2">
                                     <h5 class="mt-4 font-weight-bold mb-0">
-                                        Roberton Manurung
+                                        {{a.nama}}
                                     </h5>
                                     <h6 class="subtitle mb-3">
-                                        PJT Sub Bidang Pemeliharaan, Konsultasi, Pemeriksaan & Pengujian, Pembangunan & Pemasangan, Pengoperasian
+                                        {{a.keterangan}}
                                     </h6>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <img src="assets/images/avatar.png" alt="" width="200px" class="img-fluid rounded-circle" />
-                            </div>
-                            <div class="col-md-12 text-center">
-                                <div class="pt-2">
-                                    <h5 class="mt-4 font-weight-bold mb-0">
-                                        Sulistyono
-                                    </h5>
-                                    <h6 class="subtitle mb-3">
-                                        PJT Sub Bidang Pemeliharaan, Konsultasi, Pemeriksaan & Pengujian, Pembangunan & Pemasangan, Pengoperasian
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <img src="assets/images/avatar.png" alt="" width="200px" class="img-fluid rounded-circle" />
-                            </div>
-                            <div class="col-md-12 text-center">
-                                <div class="pt-2">
-                                    <h5 class="mt-4 font-weight-bold mb-0">
-                                        Arief Nur Hidayat
-                                    </h5>
-                                    <h6 class="subtitle mb-3">
-                                        PJT Sub Bidang Pemeriksaan & Pengujian, Pembangunan & Pemasangan
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <img src="assets/images/avatar.png" alt="" width="200px" class="img-fluid rounded-circle" />
-                            </div>
-                            <div class="col-md-12 text-center">
-                                <div class="pt-2">
-                                    <h5 class="mt-4 font-weight-bold mb-0">
-                                        Irkham Tamtomo
-                                    </h5>
-                                    <h6 class="subtitle mb-3">
-                                        TT Sub Bidang Pemeliharaan, Konsultasi, Pengoperasian
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <img src="assets/images/avatar.png" alt="" width="200px" class="img-fluid rounded-circle" />
-                            </div>
-                            <div class="col-md-12 text-center">
-                                <div class="pt-2">
-                                    <h5 class="mt-4 font-weight-bold mb-0">
-                                        Herastopo Yuli P.
-                                    </h5>
-                                    <h6 class="subtitle mb-3">
-                                        TT Sub Bidang Pemeliharaan, Konsultasi, Pemeriksaan & Pengujian, Pembangunan & Pemasangan, Pengoperasian
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <img src="assets/images/avatar.png" alt="" width="200px" class="img-fluid rounded-circle" />
-                            </div>
-                            <div class="col-md-12 text-center">
-                                <div class="pt-2">
-                                    <h5 class="mt-4 font-weight-bold mb-0">
-                                        Johnny Palma
-                                    </h5>
-                                    <h6 class="subtitle mb-3">
-                                        TT Sub Bidang Pemeriksaan & Pengujian, Pembangunan & Pemasangan
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <img src="assets/images/avatar.png" alt="" width="200px" class="img-fluid rounded-circle" />
-                            </div>
-                            <div class="col-md-12 text-center">
-                                <div class="pt-2">
-                                    <h5 class="mt-4 font-weight-bold mb-0">
-                                        Gunawan
-                                    </h5>
-                                    <h6 class="subtitle mb-3">
-                                        TT Sub Bidang Pemeriksaan & Pengujian, Pembangunan & Pemasangan
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 mb-4">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <img src="assets/images/avatar.png" alt="" width="200px" class="img-fluid rounded-circle" />
-                            </div>
-                            <div class="col-md-12 text-center">
-                                <div class="pt-2">
-                                    <h5 class="mt-4 font-weight-bold mb-0">
-                                        Mohamad Gufron
-                                    </h5>
-                                    <h6 class="subtitle mb-3">
-                                        TT Sub Bidang Pemeliharaan, Pengoperasian
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div>                    
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -294,92 +120,27 @@
             <div class="align-self-center mx-auto">
                 <h2 class="my-4 text-center font-weight-bold">Bidang Pembangkitan</h2>
                 <div class="row py-4">
+                    {% for a in pembangkitan %}
                     <div class="col-md-4 mb-4">
                         <div class="row">
                             <div class="col-md-12 text-center">
-                                <img src="assets/images/avatar.png" alt="" width="200px" class="img-fluid rounded-circle" />
+                                {% if a.smart %}
+                                <img src="{{a.smart.url}}" alt="" width="200px" class="img-fluid rounded-circle" />
+                                {% endif %}
                             </div>
                             <div class="col-md-12 text-center">
                                 <div class="pt-2">
                                     <h5 class="mt-4 font-weight-bold mb-0">
-                                        Roberton Manurung
+                                        {{a.nama}}
                                     </h5>
                                     <h6 class="subtitle mb-3">
-                                        PJT Sub Bidang Pemeliharaan, Konsultasi, Pemeriksaan & Pengujian, Pembangunan & Pemasangan, Pengoperasian
+                                        {{a.keterangan}}
                                     </h6>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <img src="assets/images/avatar.png" alt="" width="200px" class="img-fluid rounded-circle" />
-                            </div>
-                            <div class="col-md-12 text-center">
-                                <div class="pt-2">
-                                    <h5 class="mt-4 font-weight-bold mb-0">
-                                        Irkham Tamtomo
-                                    </h5>
-                                    <h6 class="subtitle mb-3">
-                                        TT Sub Bidang Pemeliharaan, Konsultasi, Pemeriksaan & Pengujian, Pembangunan & Pemasangan, Pengoperasian
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <img src="assets/images/avatar.png" alt="" width="200px" class="img-fluid rounded-circle" />
-                            </div>
-                            <div class="col-md-12 text-center">
-                                <div class="pt-2">
-                                    <h5 class="mt-4 font-weight-bold mb-0">
-                                        Hari Cahyono
-                                    </h5>
-                                    <h6 class="subtitle mb-3">
-                                        TT Sub Bidang Pemeliharaan, Konsultasi, Pemeriksaan & Pengujian, Pembangunan & Pemasangan, Pengoperasian
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <img src="assets/images/avatar.png" alt="" width="200px" class="img-fluid rounded-circle" />
-                            </div>
-                            <div class="col-md-12 text-center">
-                                <div class="pt-2">
-                                    <h5 class="mt-4 font-weight-bold mb-0">
-                                        Ngadiman
-                                    </h5>
-                                    <h6 class="subtitle mb-3">
-                                        TT Sub Bidang Pengoperasian, Pemeliharaan
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-4"></div>
-                    <div class="col-md-4 mb-4">
-                        <div class="row">
-                            <div class="col-md-12 text-center">
-                                <img src="assets/images/avatar.png" alt="" width="200px" class="img-fluid rounded-circle" />
-                            </div>
-                            <div class="col-md-12 text-center">
-                                <div class="pt-2">
-                                    <h5 class="mt-4 font-weight-bold mb-0">
-                                        Gunawan
-                                    </h5>
-                                    <h6 class="subtitle mb-3">
-                                        TT Sub Bidang Pemeriksaan & Pengujian, Pembangunan & Pemasangan
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </div> 
+                    {% endfor %}                   
                 </div>
             </div>
         </div>
@@ -390,23 +151,27 @@
             <div class="align-self-center mx-auto">
                 <h2 class="my-4 text-center font-weight-bold">Manajer Sertifikasi</h2>
                 <div class="row py-4">
+                    {% for a in manager %}
                     <div class="col-md-12 mb-4">
                         <div class="row">
                             <div class="col-md-12 text-center">
-                                <img src="assets/images/avatar.png" alt="" width="200px" class="img-fluid rounded-circle" />
+                                {% if a.smart %}
+                                <img src="{{a.smart.url}}" alt="" width="200px" class="img-fluid rounded-circle" />
+                                {% endif %}
                             </div>
                             <div class="col-md-12 text-center">
                                 <div class="pt-2">
                                     <h5 class="mt-4 font-weight-bold mb-0">
-                                        Herastopo Yuli P.
+                                        {{a.nama}}
                                     </h5>
                                     <h6 class="subtitle mb-3">
-                                        Manajer Sertifikasi, Administrasi, dan Keuangan
+                                        {{a.keterangan}}
                                     </h6>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -417,23 +182,28 @@
             <div class="align-self-center mx-auto">
                 <h2 class="my-4 text-center font-weight-bold">Seksi</h2>
                 <div class="row py-4">
+                    {% for a in seksi %}
                     <div class="col-md-12 mb-4">
                         <div class="row">
                             <div class="col-md-12 text-center">
-                                <img src="assets/images/avatar.png" alt="" width="200px" class="img-fluid rounded-circle" />
+                                {% if a.smart %}
+                                <img src="{{a.smart.url}}" alt="" width="200px" class="img-fluid rounded-circle" />
+                                {% endif %}
+
                             </div>
                             <div class="col-md-12 text-center">
                                 <div class="pt-2">
                                     <h5 class="mt-4 font-weight-bold mb-0">
-                                        Windu Ashari
+                                        {{a.nama}}
                                     </h5>
                                     <h6 class="subtitle mb-3">
-                                        Seksi Administrasi dan Keuangan
+                                        {{a.keterangan}}
                                     </h6>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

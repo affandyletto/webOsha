@@ -8,7 +8,7 @@ from .views import pengalamanView,permohonanView,kontak
 
 app_name="pengalamanKontakForm"
 urlpatterns=[
-	path('pengalaman',pengalamanView.as_view(),name="pengalaman"),
+	path('pengalaman',pengalamanView,name="pengalaman"),
 	path('kontak',kontak,name="kontak"),
 	path('permohonan',permohonanView.as_view(),name="permohonan"),
 ]

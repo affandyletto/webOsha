@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="{% static 'css/aos.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/logo_small.png' %}" />
+    <style>
+        
+    </style>
 </head>
 
 <body>
@@ -73,13 +76,19 @@
                     </li>
                     <li class="nav-item {% if request.get_full_path == kontak %}active{% endif %}">
                         <a href="{% url 'pengalamanKontakForm:kontak' %}" class="nav-link text-uppercase">Kontak</a>
-                    </li>
+                    </li>                                     
+                        
                     <li class="nav-item cta {% if request.get_full_path == permohonan %}active{% endif %}">
                         <a href="{% url 'pengalamanKontakForm:permohonan' %}" class="btn btn-primary">
                             <span>Permohonan Sertifikasi</span>
                         </a>
-                    </li>
+                    </li>                    
                 </ul>
+
             </div>
+
         </div>
+            <a href="{% static 'SOP.pdf' %}" class="btn btn-primary" style="margin-right: 150px; margin-left: -300px;">
+                <span>Download SOP</span>
+            </a>
     </nav>

@@ -9725,6 +9725,17 @@ h5,
     background: linear-gradient(40deg, #45cafc, #303f9f);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45cafc', endColorstr='#9a51ff', GradientType=1 );
 }
+
+.sesuatuuu{
+    background: #45cafc;
+    background: -moz-linear-gradient(40deg, #45cafc, #303f9f);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, #45cafc), color-stop(100%, #9a51ff));
+    background: -webkit-linear-gradient(40deg, #45cafc, #303f9f);
+    background: -o-linear-gradient(40deg, #45cafc, #303f9f);
+    background: -ms-linear-gradient(40deg, #45cafc, #303f9f);
+    background: linear-gradient(40deg, #45cafc, #303f9f);
+}
+
 .owl-carousel.home-slider .slider-item {
     background-size: cover;
     background-repeat: no-repeat;

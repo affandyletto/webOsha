@@ -78,45 +78,11 @@
             <div class="align-self-center">
                 <h2 class="my-4 text-center font-weight-bold">Sertifikat Badan Usaha</h2>
                 <div class="container legalitas-slider owl-carousel">
-                    <div class="item">
-                        <img src="{% static 'images/legalitas/1.jpg' %}">
-                    </div>
-                    <div class="item">
-                        <img src="{% static 'images/legalitas/2.jpg' %}">
-                    </div>
-                    <div class="item">
-                        <img src="{% static 'images/legalitas/3.jpg' %}">
-                    </div>
-                    <div class="item">
-                        <img src="{% static 'images/legalitas/PT OSHA-02.jpg' %}">
-                    </div>
-                    <div class="item">
-                        <img src="{% static 'images/legalitas/PT OSHA-04.jpg' %}">
-                    </div>
-                    <div class="item">
-                        <img src="{% static 'images/legalitas/PT OSHA-06.jpg' %}">
-                    </div>
-                    <div class="item">
-                        <img src="{% static 'images/legalitas/PT OSHA-08.jpg' %}">
-                    </div>
-                    <div class="item">
-                        <img src="{% static 'images/legalitas/PT OSHA-10.jpg' %}">
-                    </div>
-                    <div class="item">
-                        <img src="{% static 'images/legalitas/PT OSHA-12.jpg' %}">
-                    </div>
-                    <div class="item">
-                        <img src="{% static 'images/legalitas/PT OSHA-14.jpg' %}">
-                    </div>
-                    <div class="item">
-                        <img src="{% static 'images/legalitas/PT OSHA-16.jpg' %}">
-                    </div>
-                    <div class="item">
-                        <img src="{% static 'images/legalitas/PT OSHA-18.jpg' %}">
-                    </div>
-                    <div class="item">
-                        <img src="{% static 'images/legalitas/PT OSHA-20.jpg' %}">
-                    </div>
+                    {% for b in sesuatu %}
+                        <div class="item" width="100">
+                            <img src="{{b.smart.url}}">
+                        </div>        
+                    {% endfor %}                    
                 </div>
             </div>
         </div>
