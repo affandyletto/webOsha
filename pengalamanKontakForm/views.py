@@ -17,7 +17,6 @@ def pengalamanView(request):
 		z=dokumentasi.objects.filter(judul__in=judulGallery.objects.filter(judul=a.judul))
 		foto.append(z)
 
-	print(foto[0])
 	
 	context={
 
