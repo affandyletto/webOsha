@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
@@ -23,7 +24,7 @@ SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'z^@#$grbjjbq3n$obos15v5om0cmyv3pi2^31*m2cyes^aqo@e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -149,3 +150,5 @@ STATICFILES_FINDERS = (
 STATICFILES_DIRS = (
     ABS_DIR('webOsha_static'),
 )
+
+django_heroku.settings(locals())
