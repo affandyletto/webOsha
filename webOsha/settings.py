@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -139,7 +140,7 @@ def ABS_DIR(rel):
 
 MEDIA_ROOT = ABS_DIR('../media_cdn/')
 MEDIA_URL = '/media_cdn/'
-STATIC_ROOT = os.path.join(BASE_DIR,"static")
+STATIC_ROOT = os.path.join(BASE_DIR,"staticfiles")
 STATIC_URL = '/static/'
 
 STATICFILES_FINDERS = (
