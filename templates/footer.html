@@ -2,38 +2,21 @@
 
     <footer class="ftco-footer ftco-bg-dark ftco-section">
         <div class="container">
-            <div class="row mb-5">
-                <div class="col-md">
-                    <div class="ftco-footer-widget mb-4">
-                        <h2 class="ftco-heading-2">Profil Singkat Osha</h2>
-                        <p>
-                            PT Ofisial Sertifikasi Harapan (OSHA) adalah sebuah perusahaan yang bergerak di bidang Distribusi Tenaga Listrik dan Pembangkitan Tenaga Listrik. Pada tanggal 20 September 2019 PT OSHA telah ditunjuk oleh Menteri ESDM sebagai Lembaga Sertifikasi Kompetensi Tenaga Teknik dengan nomor 314 K/20/DJL.4/2019.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="ftco-footer-widget mb-4 ml-md-5">
-                        <h2 class="ftco-heading-2">Tentang Osha</h2>
-                        <ul class="list-unstyled">
-                            <li><a href="{% url 'tentang:profil' %}" class="py-2 d-block">Sejarah Singkat</a></li>
-                            <li><a href="{% url 'tentang:legalitas' %}" class="py-2 d-block">Legalitas</a></li>
-                            <li><a href="{% url 'tentang:struktur' %}" class="py-2 d-block">Struktur Organisasi</a></li>
-                            <li><a href="{% url 'tentang:daftarAsesor' %}" class="py-2 d-block">Daftar Asesor</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="ftco-footer-widget mb-4">
-                        <h2 class="ftco-heading-2">Sertifikasi</h2>
-                        <ul class="list-unstyled">
-                            <li><a class="py-2 d-block" href="{% url 'sertifikasi:ruang' %}">Ruang Lingkup</a></li>
-                            <li><a class="py-2 d-block" href="{% url 'sertifikasi:proses' %}">Proses Sertifikasi</a></li>
-                            <li><a class="py-2 d-block" href="{% url 'sertifikasi:alur' %}">Alur Sertifikasi</a></li>
-                            <li><a class="py-2 d-block" href="{% url 'sertifikasi:regulasi' %}">Regulasi Sertifikasi</a></li>
-                            <li><a class="py-2 d-block" href="{% url 'pengalamanKontakForm:permohonan' %}">Permohonan Sertifikasi</a></li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="row">
+                <div class="col-md-12 text-center" style="margin-top:-80px">
+                 <div id="histats_counter"></div>
+                <script type="text/javascript">var _Hasync= _Hasync|| [];
+                _Hasync.push(['Histats.start', '1,4620595,4,408,270,55,00011111']);
+                _Hasync.push(['Histats.fasi', '1']);
+                _Hasync.push(['Histats.track_hits', '']);
+                (function() {
+                var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+                hs.src = ('//s10.histats.com/js15_as.js');
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+                })();</script>
+                <noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4620595&101" alt="" border="0"></a></noscript>
+            </div>
+            <div class="row mb-5">                
                 <div class="col-md">
                     <div class="ftco-footer-widget mb-4">
                         <h2 class="ftco-heading-2">Office</h2>
@@ -56,7 +39,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row" style="margin-top:240px;">
                 <div class="col-md-12 text-center">
                     <p>
                         Copyright &copy;
@@ -66,8 +49,7 @@
                         <a href="https://hahaha.com" target="_blank">PT OFISIAL SERTIFIKASI HARAPAN (OSHA)</a>
                     </p>
                 </div>
-            </div>
-        </div>
+            </div>            
     </footer>
 	<script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
