@@ -24,7 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',beranda,name="beranda"),
     path('tentang/',include('tentang.urls',namespace="tentang")),
-    path('sertifikasi/',include('sertifikasi.urls',namespace="sertifikasi")),
+    path('layanan',include('sertifikasi.urls',namespace="sertifikasi")),
     path('pengalamanKontakForm/',include('pengalamanKontakForm.urls',namespace="pengalamanKontakForm")),
 ]
 if settings.DEBUG:

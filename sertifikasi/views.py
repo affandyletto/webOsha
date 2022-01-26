@@ -4,12 +4,3 @@ from django.views.generic import ListView,RedirectView,DetailView,UpdateView,Cre
 
 class ruangView(TemplateView):
 	template_name="sertifikasi/ruang.html"
-
-class prosesView(TemplateView):
-	template_name="sertifikasi/proses.html"
-
-class alurView(TemplateView):
-	template_name="sertifikasi/alur.html"
-
-class regulasiView(TemplateView):
-	template_name="sertifikasi/regulasi.html"

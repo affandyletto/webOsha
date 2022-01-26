@@ -33,7 +33,6 @@ ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = [
 'whitenoise.runserver_nostatic',
-'fontawesome-free',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,8 +43,8 @@ INSTALLED_APPS = [
     'sertifikasi',
     'import_export',
     'tentang',
-    'imagekit',
     'sorl.thumbnail',
+    'imagekit',
 ]
 
 MIDDLEWARE = [

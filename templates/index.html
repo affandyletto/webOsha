@@ -149,14 +149,9 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="osha-legalitas" role="tabpanel" aria-labelledby="osha-legalitas-tab">
-                            <div class="container d-md-flex">
-                                <div class="align-self-center">
-                                    <h2 class="mb-4 text-center">Legalitas Osha</h2>
-                                    <div class="container legalitas-slider owl-carousel">
-
-                                    </div>
+                                <div class="align-self-center" style="width:1300px; margin-left:-120px;" >
+                                    <div id="legal"></div>
                                 </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -164,86 +159,281 @@
         </div>
     </section>
 
-    <section class="ftco-section pt-0" style="background: #45cafc;
-    background: -moz-linear-gradient(40deg, #45cafc, #303f9f);
-    background: -webkit-gradient(left bottom, right top, color-stop(0%, #45cafc), color-stop(100%, #9a51ff));
-    background: -webkit-linear-gradient(40deg, #45cafc, #303f9f);
-    background: -o-linear-gradient(40deg, #45cafc, #303f9f);
-    background: -ms-linear-gradient(40deg, #45cafc, #303f9f);
-    background: linear-gradient(40deg, #45cafc, #303f9f);">
-        <div class="container d-md-flex">
-            <div class="align-self-center mx-auto">
-                <img src="{% static 'images/maklumat.JPG' %}" style="margin-top: 170px;">
+<section class="ftco-section bg-light bigText" id="layanan" style="padding:10px">
+    <div class="img-gradient layanan1" style="background-image:
+    linear-gradient(to bottom, rgba(69,202,252, 0.9), rgba(48, 63, 159, 0.95)),
+    url('{% static 'images/sejarah.jpg' %}');
+    background-attachment:fixed;
+    background-size: cover;
+    color: white;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    ">
+        <div class="container">
+
+            <div class="row justify-content-center mb-2">
+                <div class="col-md-7 text-center heading-section ftco-animate fadeInUp ftco-animated">
+                    <h2 class="mb-4 font-weight-bold text-dark">Layanan Kami</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="nav ftco-animate nav-pills justify-content-center text-center" id="osha-tab" role="tablist">
+                    <a class="col-md-3 section-service active ftco-animate justify-content-center text-center" id="osha-service-1-tab" href="#osha-service-1" role="tab" aria-controls="osha-service-1" aria-selected="true" data-toggle="tab">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <img src="{% static 'images/shortcut/pembangkit.png' %}" class="img-fluid service-icon" width=50>
+                                <h6>Bidang Pembangkit Tenaga Listrik</h6>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="col-md-3 section-service ftco-animate justify-content-center text-center" id="osha-service-2-tab" href="#osha-service-2" role="tab" aria-controls="osha-service-2" aria-selected="true" data-toggle="tab">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <img src="{% static 'images/shortcut/distribusi.png' %}" class="img-fluid service-icon" width=50>
+                                <h6>Bidang Distribusi Tenaga Listrik</h6>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="col-md-3 section-service ftco-animate justify-content-center text-center" id="osha-service-3-tab" href="#osha-service-3" role="tab" aria-controls="osha-service-3" aria-selected="true" data-toggle="tab">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <img src="{% static 'images/shortcut/instalasi.png' %}" class="img-fluid service-icon" width=50>
+                                <h6>Bidang Instalasi Pemanfaatan Tenaga Listrik</h6>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="col-md-3 section-service ftco-animate justify-content-center text-center" id="osha-service-4-tab" href="#osha-service-4" role="tab" aria-controls="osha-service-4" aria-selected="true" data-toggle="tab">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <img src="{% static 'images/shortcut/penjualan.png' %}" class="img-fluid service-icon" width=50>
+                                <h6>Bidang Penjualan Tenaga Listrik</h6>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-5">
+                    <div class="tab-content ftco-animate fadeInUp ftco-animated" id="osha-tabContent">
+                        <div class="tab-pane fade active show" id="osha-service-1" role="tabpanel" aria-labelledby="osha-service-1-tab">
+                            <h2 class="font-weight-bold">
+                                Bidang Pembangkit Tenaga Listrik
+                            </h2>
+                            <h2 class="font-weight-bold">
+                                Sub Bidang
+                            </h2>
+                           <ul style="font-size:20px;">
+                               <li>Konsultasi</li>
+                               <li>Pembangunan dan Pemasangan</li>
+                               <li>Pemeriksaan dan Pengujian</li>
+                               <li>Pengoperasian</li>
+                               <li>Pemeliharaan</li>
+                           </ul>
+                        </div>
+                        <div class="tab-pane fade" id="osha-service-2" role="tabpanel" aria-labelledby="osha-service-2-tab">
+                            <h2 class="font-weight-bold">
+                                Bidang Distribusi Tenaga Listrik
+                            </h2>
+                            <h2 class="font-weight-bold">
+                                Sub Bidang
+                            </h2>
+                            <ul style="font-size:20px;">
+                               <li>Konsultasi</li>
+                               <li>Pembangunan dan Pemasangan</li>
+                               <li>Pemeriksaan dan Pengujian</li>
+                               <li>Pengoperasian</li>
+                               <li>Pemeliharaan</li>
+                           </ul>
+                        </div>
+                        <div class="tab-pane fade" id="osha-service-3" role="tabpanel" aria-labelledby="osha-service-3-tab">
+                            <h2 class="font-weight-bold">
+                                Bidang Instalasi Pemanfaatan Tenaga Listrik
+                            </h2>
+                            <h2 class="font-weight-bold">
+                                Sub Bidang
+                            </h2>
+                            <ul style="font-size:20px;">
+                               <li>Konsultasi</li>
+                               <li>Pembangunan dan Pemasangan</li>
+                               <li>Pemeriksaan dan Pengujian</li>
+                               <li>Pengoperasian</li>
+                               <li>Pemeliharaan</li>
+                           </ul>
+                        </div>
+                        <div class="tab-pane fade" id="osha-service-4" role="tabpanel" aria-labelledby="osha-service-4-tab">
+                            <h2 class="font-weight-bold">
+                                Bidang Penjualan Tenaga Listrik
+                            </h2>
+                            <h2 class="font-weight-bold">
+                                Sub Bidang
+                            </h2>
+                            <ul style="font-size:20px;">
+                               <li>Penjualan Antar Negara</li>
+                               <li>Penjualan Antar Penyedia Listrik</li>
+                               <li>Penjualan Langsung</li>
+                               <li>Aktifitas Penunjang Penjualan</li>
+                           </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="row">
+                        <div class="col">
+                            <a href="{% static 'images/legalitas/legal1.jpg' %}" data-lightbox="mygallery" data-title="Diklat Asesor"><img src="{% static 'images/legalitas/legal1.jpg' %}" class="img-fluid"></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+</div>
+        </div>
+    </section>
+<section class="ftco-section pt-0">
+        <h2 class="font-weight-bold text-center my-4">Penanggung Jawab Teknik</h2>
+        <div class="container" data-aos="fade-up">
+            <div class="row">
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <div class="card-box text-center">
+                        <div class="user-pic">
+                            <img src="{% static 'images/asesor/foto3.jpg' %}" class="img-fluid" alt="User Pic">
+                        </div>
+                        <h4>Ir. Roberton Manurung MM</h4>
+                        <h6>Distribusi</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <div class="card-box text-center">
+                        <div class="user-pic">
+                            <img src="{% static 'images/asesor/foto1.jpeg' %}" class="img-fluid" alt="User Pic">
+                        </div>
+                        <h4>Ir. Salmin Letto</h4>
+                        <h6>Distribusi</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <div class="card-box text-center">
+                        <div class="user-pic">
+                            <img src="{% static 'images/asesor/foto2.jpg' %}" class="img-fluid" alt="User Pic">
+                        </div>
+                        <h4>Ir. Arief Nurhidayat MM</h4>
+                        <h6>Distribusi</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <div class="card-box text-center">
+                        <div class="user-pic">
+                            <img src="{% static 'images/asesor/foto4.jpg' %}" class="img-fluid" alt="User Pic">
+                        </div>
+                        <h4>Ir. Saiin MM</h4>
+                        <h6>Pembangkitan</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <div class="card-box text-center">
+                        <div class="user-pic">
+                            <img src="{% static 'images/asesor/foto5.jpeg' %}" class="img-fluid" alt="User Pic">
+                        </div>
+                        <h4>Ir. Sulistiono MT</h4>
+                        <h6>Pembangkitan</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <div class="card-box text-center">
+                        <div class="user-pic">
+                            <img src="{% static 'images/asesor/foto6.jpeg' %}" class="img-fluid" alt="User Pic">
+                        </div>
+                        <h4>Harry Cahyono</h4>
+                        <h6>Pemanfaatan Tenaga Listrik</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <div class="card-box text-center">
+                        <div class="user-pic">
+                            <img src="{% static 'images/asesor/foto7.jpeg' %}" class="img-fluid" alt="User Pic">
+                        </div>
+                        <h4>Ir Untung</h4>
+                        <h6>Distribusi</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <div class="card-box text-center">
+                        <div class="user-pic">
+                            <img src="{% static 'images/asesor/foto8.jpeg' %}" class="img-fluid" alt="User Pic">
+                        </div>
+                        <h4>Ir. Rusmanto</h4>
+                        <h6>Pembangkitan</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-3">
+                    <div class="card-box text-center">
+                        <div class="user-pic">
+                            <img src="{% static 'images/asesor/foto9.jpeg' %}" class="img-fluid" alt="User Pic">
+                        </div>
+                        <h4>Sanjoko</h4>
+                        <h6>Penjualan Tenaga Listrik</h6>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
 <section class="ftco-section pt-0">
-        <div class="container d-md-flex">
-            <div class="align-self-center">
-                <h2 class="mt-4 text-center font-weight-bold">Dasar Hukum Osha</h2>
-                <div class="dh-first-column">
-                    <div class="dh-inline">
-                        <div class="dh-padding dh-position-relative">
-                            <h4 class="dh-h dh-heading-bullet">UNDANG UNDANG</h4>
-                            <ul class="dh-list dh-list-striped">
-                                <li>
-                                    Undang – undang Nomor 30 Tahun 2009 Tentang Ketenagalistrikan.
-                                </li>
-                                <li>
-                                    Undang – undang Nomor 23 Tahun 2014 Tentang Pemerintahan Daerah
-                                </li>
-                            </ul>
-                            <h4 class="dh-h dh-heading-bullet">PERATURAN PEMERINTAH</h4>
-                            <ul class="dh-list dh-list-striped">
-                                <li>
-                                    Peraturan Pemerintah Nomor 14 Tahun 2012 Tentang kegiatan Usaha Penyediaan Tenaga Listrik
-                                </li>
-                                <li>
-                                    Peraturan Pemerintah Nomor 62 Tahun 2012 Tentang Usaha Jasa Penunjang Tenaga Listrik.
-                                </li>
-                            </ul>
-                            <h4 class="dh-h dh-heading-bullet">PERATURAN PRESIDEN</h4>
-                            <ul class="dh-list dh-list-striped">
-                                <li>
-                                    Peraturan Presiden Nomor 8 Tahun 2012 Tentang Kerangka Kualifikasi Nasional Indonesia.
-                                </li>
-                            </ul>
-                            <h4 class="dh-h dh-heading-bullet">PERATURAN MENTERI</h4>
-                            <ul class="dh-list dh-list-striped">
-                                <li>
-                                    Peraturan Menteri ESDM Nomor 28 Tahun 2014 Tentang Kualifikasi Usaha Jasa Penunjang Tenaga Listrik.
-                                </li>
-                                <li>Peraturan Menteri ESDM Nomor 46 Tahun 2017 Tentang Standarisasi Kompetensi Tenaga Teknik
-                                    Ketenagalistrikan</li>
-                                <li>Peraturan Menteri ESDM Nomor 38 Tahun 2018 Tentang Tata Cara Akreditasi &amp; Sertifikasi
-                                    Ketenagalistrikan</li>
-                            </ul>
-                            <h4 class="dh-h dh-heading-bullet">KEPUTUSAN DIREKTUR JENDERAL</h4>
-                            <ul class="dh-list dh-list-striped">
-                                <li>Keputusan Direktur Jenderal Ketenagalistrikan Nomor 475K/24/DJL.4/2016 Tahun 2016 tentang Pedoman Penilaian Kesesuaian Persyaratan Umum Lembaga Sertifikasi Kompetensi</li>
-                                <li>Keputusan Direktur Jenderal Ketenagalistrikan Nomor 447K/24/DJL.4/2017 Tahun 2017 tentang Pedoman Standar Kompetensi Tenaga Teknik Ketenagalistrikan Untuk Asesor Ketenagalistrikan.</li>
-                                <li>Keputusan Direktur Jenderal Ketenagalistrikan Nomor 217K/24/DJL.4/2018 Tahun 2018 tentang Metodologi Sertifikasi Kompetensi Ketenagalistrikan.</li>
-                            </ul>
-                        </div>
-                    </div>
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-3">
+                <div class="col-md-7 text-center ftco-animate">
+                    <h2 class="mb-4 font-weight-bold">Grafik Monitoring Pelaksanaan Uji</h2>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="ftco-section" style=" background: #45cafc;
-    background: -moz-linear-gradient(40deg, #45cafc, #303f9f);
-    background: -webkit-gradient(left bottom, right top, color-stop(0%, #45cafc), color-stop(100%, #9a51ff));
-    background: -webkit-linear-gradient(40deg, #45cafc, #303f9f);
-    background: -o-linear-gradient(40deg, #45cafc, #303f9f);
-    background: -ms-linear-gradient(40deg, #45cafc, #303f9f);
-    background: linear-gradient(40deg, #45cafc, #303f9f);">
-        <div class="container d-md-flex">
-            <div class="align-self-center mx-auto">
-                <img src="{% static 'images/proses_sertifikasi.png' %}">
+
+            <div class="row">
+                <div class="col-md-6 ftco-animate text-center fadeInUp ftco-animated">
+                    <div class="gallery">
+                        <a href="{% static 'images/bagan/bagan1.png' %}" data-lightbox="mygallery" data-title="Diklat Asesor"><img src="{% static 'images/bagan/bagan1.png' %}" class="img-fluid"></a>
+                    </div>
+                </div>
+                <div class="col-md-6 ftco-animate text-center fadeInUp ftco-animated">
+                    <div class="gallery">
+                        <a href="{% static 'images/bagan/bagan2.png' %}" data-lightbox="mygallery" data-title="Diklat Asesor"><img src="{% static 'images/bagan/bagan2.png' %}" class="img-fluid"></a>
+                    </div>
+                </div>
+                <div class="col-md-6 ftco-animate text-center fadeInUp ftco-animated">
+                    <div class="gallery">
+                        <a href="{% static 'images/bagan/bagan3.png' %}" data-lightbox="mygallery" data-title="Diklat Asesor"><img src="{% static 'images/bagan/bagan3.png' %}" class="img-fluid"></a>
+                    </div>
+                </div>
+                <div class="col-md-6 ftco-animate text-center fadeInUp ftco-animated">
+                    <div class="gallery">
+                        <a href="{% static 'images/bagan/bagan4.png' %}" data-lightbox="mygallery" data-title="Diklat Asesor"><img src="{% static 'images/bagan/bagan4.png' %}" class="img-fluid"></a>
+                    </div>
+                </div>          
             </div>
         </div>
     </section>
+<div class="img-gradient" style="background-image:
+    linear-gradient(to bottom, rgba(69,202,252, 0.9), rgba(48, 63, 159, 0.95)),
+    url('{% static 'images/sejarah.jpg' %}');
+    height: 1300px;
+    background-attachment:fixed;
+    background-size: cover;
+    color: white;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    ">
+    <h2 class="mb-4 font-weight-bold text-dark" style="margin-top:40px; text-align:center; font-weight: 600; color:#371F1F">
+                            Kegiatan Uji Kompetensi
+                        </h2>
+                        
+                        <div class="row justify-content-center text-center">
+                            <div class="col-md-12">
+                                <div class="img-fluid" id="kegiatan"></div>
+                            </div>
+                        </div>
+</div>
+
     <section class="ftco-section pt-0" style="margin-top: 170px;">
         <div class="container">
             <div class="row">

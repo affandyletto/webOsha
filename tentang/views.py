@@ -14,9 +14,7 @@ def legalitasView(request):
 
 def daftarAsesorView(request):
 	context={
-		'sesuatu':daftarAsesor.objects.all().filter(bidang__in=bidangUtama.objects.filter(bidang="BIDANG DISTRIBUSI TENAGA LISTRIK")),
-		'sesuatuAja':daftarAsesor.objects.all().filter(bidang__in=bidangUtama.objects.filter(bidang="BIDANG PEMBANGKIT TENAGA LISTRIK"))
-	}
+		'sesuatu':daftarAsesor.objects.all()}
 	return render(request,'tentang/daftarasesor.html',context)
 
 def strukturView(request):

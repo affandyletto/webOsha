@@ -2,7 +2,8 @@ from django.shortcuts import render,redirect
 from django.views import View
 from django.views.generic import ListView,RedirectView,DetailView,UpdateView,CreateView,TemplateView
 from pengalamanKontakForm.models import profile,partner,visi,misi
-from tentang.models import legalitas
+from tentang.models import legalitas,daftarAsesor
+
 
 class berandaView(TemplateView):
 	template_name="index.html"
@@ -13,6 +14,7 @@ def beranda(request):
 		'partner':partner.objects.all(),
 		'visi':visi.objects.all(),
 		'misi':misi.objects.all(),
-		'sesuatu':legalitas.objects.all()
+		'sesuatu':legalitas.objects.all(),
+		'sesuatuAja':daftarAsesor.objects.all()
 	}
 	return render(request,'index.html',context)
