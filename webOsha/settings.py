@@ -45,9 +45,14 @@ INSTALLED_APPS = [
     'tentang',
     'sorl.thumbnail',
     'imagekit',
+    'compressor',
 ]
 
 MIDDLEWARE = [
+'django.middleware.gzip.GZipMiddleware',
+    'htmlmin.middleware.HtmlMinifyMiddleware',
+    'htmlmin.middleware.MarkRequestMiddleware',
+
 'django.middleware.security.SecurityMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -57,11 +62,12 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+"""
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT = True
-
+"""
 ROOT_URLCONF = 'webOsha.urls'
+
 
 TEMPLATES = [
     {
@@ -89,6 +95,14 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '127.0.0.1:11211',
     }
 }
 
@@ -151,10 +165,27 @@ STATIC_URL = 'static/'
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
 )
 
 STATICFILES_DIRS = (
     ABS_DIR('webOsha_static'),
 )
+
+# Compressor and minifier config
+COMPRESS_ENABLED = True
+COMPRESS_CSS_HASHING_METHOD = 'content'
+COMPRESS_FILTERS = {
+    'css':[
+        'compressor.filters.css_default.CssAbsoluteFilter',
+        'compressor.filters.cssmin.rCSSMinFilter',
+    ],
+    'js':[
+        'compressor.filters.jsmin.JSMinFilter',
+    ]
+}
+HTML_MINIFY = True
+KEEP_COMMENTS_ON_MINIFYING = True
+
 
 django_heroku.settings(locals())
