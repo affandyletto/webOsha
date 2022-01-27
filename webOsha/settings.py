@@ -160,11 +160,13 @@ def ABS_DIR(rel):
 MEDIA_ROOT = ABS_DIR('../media_cdn/')
 MEDIA_URL = '/media_cdn/'
 STATIC_ROOT = os.path.join(BASE_DIR,"staticfiles")
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+
+    # Add this
     'compressor.finders.CompressorFinder',
 )
 
