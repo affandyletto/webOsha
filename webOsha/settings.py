@@ -26,7 +26,7 @@ SECRET_KEY = 'z^@#$grbjjbq3n$obos15v5om0cmyv3pi2^31*m2cyes^aqo@e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["https://www.lskosha.co.id"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
