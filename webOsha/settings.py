@@ -24,9 +24,9 @@ SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'z^@#$grbjjbq3n$obos15v5om0cmyv3pi2^31*m2cyes^aqo@e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["https://www.lskosha.co.id/"]
 
 
 # Application definition
@@ -62,12 +62,14 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT = True
 
-ROOT_URLCONF = 'webOsha.urls'
 PREPEND_WWW = True
 
+
+ROOT_URLCONF = 'webOsha.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
