@@ -99,14 +99,15 @@
                             Profil
                         </a>
                         <a class="nav-link" id="osha-visi-tab" data-toggle="pill" href="#osha-visi" role="tab" aria-controls="osha-visi" aria-selected="false">
-                            Visi
+                            Visi & Misi
                         </a>
                         <a class="nav-link" id="osha-misi-tab" data-toggle="pill" href="#osha-misi" role="tab" aria-controls="osha-misi" aria-selected="false">
-                            Misi
+                           Pelaksanaan dan Peserta Uji
                         </a>
                         <a class="nav-link" id="osha-legalitas-tab" data-toggle="pill" href="#osha-legalitas" role="tab" aria-controls="osha-legalitas" aria-selected="false">
                             Legalitas
                         </a>
+
                     </div>
                 </div>
                 <div class="col-md-12 align-items-center ftco-animate fadeInUp ftco-animated">
@@ -115,9 +116,9 @@
                             <div class="container d-md-flex">
                                 <div class="ml-md-5 align-self-center">
                                     <h2 class="mb-4 text-center">Profil Osha</h2>
-                                    {% for a in profile %}
-                                    <p>{{a.text}}</p>
-                                    {% endfor %}
+                                    <article>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;PT Ofisial Sertifikasi Harapan (OSHA) adalah sebuah perusahaan di bidang Usaha Penunjang Tenaga Listrik sub bidang Usaha Jasa Penunjang Tenaga Listrik yang bergerak di Sertifikasi Kompetensi Tenaga Teknik Ketenagalistrikan. Sejak tanggal 20 September 2019 melaluli surat Nomor 324.K/20/DJL.4/2019 PT OSHA telah ditunjuk oleh Kementerian ESDM sebagai Lembaga Sertifikasi Kompetensi Tenaga Teknik Ketenagalistrikan.<br>&nbsp;&nbsp;&nbsp;&nbsp; Dengan mempertimbangkan pengalaman pendiri yang telah bekerja dibidang ketenagalistrikan lebih dari 30 tahun, pendiri menganggap bahwa pengalaman tersebut sangat relevan untuk memenuhi manat undang undang ketenagalistrikan nomor 30 tahun 2009. Karena itu, pendiri (Founding Fathers) bertekad untuk berpartisipasi dalam menyiapkan tenaga teknik ketenagalistrikan yang kompeten dengan mendirikan PT. OFISIAL SERTIFIKASI HARAPAN sebagai Lembaga Sertifikasi Kompetensi Tenaga Teknik Ketenagalistrikan</p>
+                                    </article>
                                 </div>
                             </div>
                         </div>
@@ -125,23 +126,51 @@
                             <div class="container d-md-flex">
                                 <div class="ml-md-5 align-self-center">
                                     <h2 class="mb-4 text-center">Visi Osha</h2>
-                                    <p class="text-uppercase">
+                                    <ul class="circle-bordered-list">
                                         {% for a in visi %}
-                                        {{a.visi}}
+                                        <li>{{a.visi}}</li>
                                         {% endfor %}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="osha-misi" role="tabpanel" aria-labelledby="osha-misi-tab">
-                            <div class="container d-md-flex">
-                                <div class="ml-md-5 align-self-center">
+                                    </ul>
                                     <h2 class="mb-4 text-center">Misi Osha</h2>
                                     <ul class="circle-bordered-list">
                                         {% for a in misi %}
                                         <li>{{a.misi}}</li>
                                         {% endfor %}
                                     </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="osha-misi" role="tabpanel" aria-labelledby="osha-misi-tab">
+                            <div class="container d-md-flex">
+                                <div class="ml-md-5 align-self-center">
+                                    <h2 class="mb-4 text-center">Sekilas Pelaksanaan dan Peserta Uji</h2>
+                                    <article>
+                                    <p>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;Uji sertifikasi kompetensi tenaga teknik ketenagalistrikan selama ini yang
+sudah berjalan, tersebar mulai dari Surabaya, Batam, Kalimantan, Sulawesi,
+Papua dan Nusa Tenggara Timur.
+Peserta dari Surabaya adalah tenaga teknik dari perusahaan yang bergerak
+dibidang jasa konstruksi jaringan distribusi, yang sudah malang melintang
+mengerjakan proyek pembangunan jaringan di Surabaya dan sekitarnya.
+Sedangkan peserta dari Batam adalah PLN Batam yaitu tenaga teknik yang
+menangani pengoperasian dan pemeliharaan jaringan distribusi.<br>&nbsp;&nbsp;&nbsp;&nbsp; Selain itu,
+terdapat peserta tenaga teknik dari perusahaan pembangkitan (PLTGU) swasta
+yaitu PT Mitra Energi Batam.
+Peserta dari Kalimantan tersebar di seluruh provinsi Kalimantan, yaitu tenaga
+teknik yang bertugas mengoperasikan dan memeliharan pembangkit (PLTA,
+PLTU, PLTD) dan jaringan distribusi, baik di kota-kota besar maupun
+dipedesaan.
+Adapun peserta dari Sulawesi, merupakan tenaga teknik yang mengangani
+pengoperasian dan pemeliharaan pembangkit (PLTU dan PLTD).<br>&nbsp;&nbsp;&nbsp;&nbsp;
+Peserta dari Papua dan Nusa Tenggara Timur adalah para tenaga teknik yang
+bertugas menangani pengoperasian dan pemeliharaan pembangkit serta
+jaringan distribusi yang tersebar di seluruh pelosok daerah.
+Sampai dengan akhir tahun 2021, jumlah total tenaga teknik yang telah diuji
+oleh Tim OSHA adalah 1.802 orang, teridiri dari:<br><br>
+1. Bidang pembangkitan tenaga listrik : 801 orang<br>
+2. Bidang distribusi tenaga listrik&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : 1.001 orang
+                                    </p>
+                                    </article>
                                 </div>
                             </div>
                         </div>
