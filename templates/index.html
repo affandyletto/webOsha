@@ -1,19 +1,5 @@
 {% load imagekit %}
-{% include 'head.html' %}
-{% url '' as dashboard %}
-{% url 'tentang:daftarAsesor' as daftar %}     
-{% url 'tentang:legalitas' as legalitas %}           
-{% url 'tentang:profil' as profil %}
-{% url 'tentang:struktur' as struktur %}
-{% url 'sertifikasi:alur' as alur %}
-{% url 'sertifikasi:permohonan' as permohonan %}
-{% url 'sertifikasi:proses' as proses %}
-{% url 'sertifikasi:regulasi' as regulasi %}
-{% url 'sertifikasi:ruang' as ruang %}
-{% url 'pengalamanKontakForm:dokumentasi' as dokumentasi %}
-{% url 'pengalamanKontakForm:kontak' as kontak %}
-{% url 'pengalamanKontakForm:permohonan' as permohonan %}
-<main>
+{% include 'head.html' %}<main>
     <section class="home-slider owl-carousel pt-3" style="background-image: url('https://bucket-aja.s3.ap-southeast-1.amazonaws.com/images/ujiTT3/1 low.jpg'); 
         background-size: cover;
     ">    
@@ -52,7 +38,7 @@
                             Sertifikasi Kompetensi
                         </h2>
                         <p>
-                            <a href="sertifikasi.html" class="btn text-dark font-weight-bold" style="background: #fff700;">Ajukan Sertifikasi</a>
+                            <a href="https://www.lskosha.co.id/layanan/#persyaratan" class="btn text-dark font-weight-bold" style="background: #fff700;">Ajukan Sertifikasi</a>
                         </p>
                         <div class="d-block">
                             <img src="https://bucket-aja.s3.ap-southeast-1.amazonaws.com/images/g1.jpg" class="img-fluid" alt="Sertifikasi bidang distribusi" />
