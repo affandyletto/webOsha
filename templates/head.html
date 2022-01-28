@@ -4,7 +4,29 @@
 <html lang="id">
 
 <head>
+{% if request.get_full_path == "/" %}
     <title>PT OSHA | Lembaga Sertifikasi Kompetensi Tenaga Listrik</title>
+{% endif %}
+
+{% if request.get_full_path == "/layanan/" %}
+    <title>PT OSHA | Layanan</title>
+{% endif %}
+
+{% if request.get_full_path == "/tentang/profil" %}
+    <title>PT OSHA | Sejarah Singkat</title>
+{% endif %}
+
+{% if request.get_full_path == "/tentang/legalitas" %}
+    <title>PT OSHA | Legalitas</title>
+{% endif %}
+
+{% if request.get_full_path == "/tentang/struktur" %}
+    <title>PT OSHA | Struktur Organisasi</title>
+{% endif %}
+
+{% if request.get_full_path == "/tentang/daftarAsesor" %}
+    <title>PT OSHA | Daftar Asesor</title>
+{% endif %}
     <meta charset="utf-8">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3MQPJQ57FR"></script>
