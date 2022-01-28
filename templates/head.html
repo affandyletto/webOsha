@@ -27,6 +27,15 @@
 {% if request.get_full_path == "/tentang/daftarAsesor" %}
     <title>PT OSHA | Daftar Asesor</title>
 {% endif %}
+
+{% if request.get_full_path == "/pengalamanKontakForm/pengalaman" %}
+    <title>PT OSHA | Dokumentasi</title>
+{% endif %}
+
+{% if request.get_full_path == "/pengalamanKontakForm/kontak" %}
+    <title>PT OSHA | Kontak</title>
+{% endif %}
+
     <meta charset="utf-8">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-3MQPJQ57FR"></script>
@@ -186,7 +195,7 @@
                     </li>                                     
                              <li class="nav-item cta">
                 <a href="{% static 'SOP.pdf' %}" class="btn btn-primary">
-                    <span>Lihat SOP</span>
+                    <span>Osha</span>
                 </a>
             </li>          
                 </ul>
