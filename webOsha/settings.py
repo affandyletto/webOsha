@@ -187,6 +187,12 @@ COMPRESS_FILTERS = {
         'compressor.filters.jsmin.JSMinFilter',
     ]
 }
+GZIP_CONTENT_TYPES = (
+    'text/css',
+    'application/javascript',
+    'application/x-javascript',
+    'text/javascript'
+)
 HTML_MINIFY = True
 KEEP_COMMENTS_ON_MINIFYING = True
 
