@@ -1,5 +1,7 @@
 User-agent: Googlebot
 Disallow: /nogooglebot/
+Disallow: /static/css/
+DIsallow:/static/js/
 
 User-agent: *
 Allow: /
