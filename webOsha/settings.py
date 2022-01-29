@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
-    'robots',
     'pengalamanKontakForm',
     'sertifikasi',
     'import_export',
