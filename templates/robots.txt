@@ -1,9 +1,7 @@
 User-agent: Googlebot
 Disallow: /nogooglebot/
-Disallow: /static/css/
-DIsallow:/static/js/
 
 User-agent: *
 Allow: /
 
-Sitemap: https://www.lskosha.co.id/static/sitemap.xml
+Sitemap: https://www.lskosha.co.id/sitemap.xml
