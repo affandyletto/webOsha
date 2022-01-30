@@ -64,6 +64,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
+
+PREPEND_WWW = False
+
 
 ROOT_URLCONF = 'webOsha.urls'
 TEMPLATES = [
@@ -191,12 +196,6 @@ GZIP_CONTENT_TYPES = (
 )
 HTML_MINIFY = True
 KEEP_COMMENTS_ON_MINIFYING = True
-
-if os.getcwd()=='./app':
-    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-    SECURE_SSL_REDIRECT = True
-
-    PREPEND_WWW = False
 
 
 django_heroku.settings(locals())
