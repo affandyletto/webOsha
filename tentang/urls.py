@@ -8,10 +8,7 @@ from .views import profilView,legalitasView,strukturView,daftarAsesorView
 
 app_name="tentang"
 urlpatterns=[
-	path('profil',profilView.as_view(),name="profil"),
-	path('legalitas',legalitasView,name="legalitas"),
-	path('struktur',strukturView,name="struktur"),
-	path('daftarAsesor',daftarAsesorView,name="daftarAsesor"),
+	path('profil',profilView.as_view(),name="profil")
 ]
 if settings.DEBUG:
     urlpatterns += staticfiles_urlpatterns()

@@ -151,17 +151,15 @@
 </script>
 
 <style>
-.pdfobject-container { margin-left:200px;height: 70rem; width:80%; border: 1rem solid rgba(0,0,0,.1); }
+.pdfobject-container {height: 70rem; width:80%; border: 1rem solid rgba(0,0,0,.1); margin:auto; }
 </style>
 {% compress js %}
     <script src="{% static 'js/pdfobject.min.js' %}"></script>
     <script>
         PDFObject.embed("https://bucket-aja.s3.ap-southeast-1.amazonaws.com/pdf/Kegiatan Uji Kompetensi.pdf", "#guide");
         PDFObject.embed("https://bucket-aja.s3.ap-southeast-1.amazonaws.com/pdf/profileOsha.pdf", "#profile");
-        PDFObject.embed("https://bucket-aja.s3.ap-southeast-1.amazonaws.com/pdf/legalitas.pdf", "#legalitas");
         PDFObject.embed("https://bucket-aja.s3.ap-southeast-1.amazonaws.com/pdf/legal.pdf", "#legal");
         PDFObject.embed("https://bucket-aja.s3.ap-southeast-1.amazonaws.com/pdf/kegiatan.pdf", "#kegiatan");
-        PDFObject.embed("https://bucket-aja.s3.ap-southeast-1.amazonaws.com/pdf/Asesor.pdf", "#asesor");
     </script>
 {% endcompress %}
 </body>

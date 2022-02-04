@@ -5,7 +5,7 @@
 
 <head>
 {% if request.get_full_path == "/" %}
-    <title>LSK OSHA | Lembaga Sertifikasi Kompetensi Tenaga Listrik lsk ketenagalistrikan</title>
+    <title>LSK OSHA | Beranda LSK Ketenagalistrikan</title>
     <meta name="keywords" content="lsk,lsk tenaga listrik, lembaga sertifikasi kompetensi, lsk ketenagalistrikan">
     <meta name="description" content="Lembaga sertifikasi kompetensi ketenagalistrikan lsk osha berpengalaman di bidangnya">
 {% endif %}
@@ -17,27 +17,9 @@
 {% endif %}
 
 {% if request.get_full_path == "/tentang/profil" %}
-    <title>LSK OSHA | Sejarah Singkat LSK ketenagalistrikan OSHA</title>
-    <meta name="keywords" content="profil & sejarah lsk osha, profil & sejarah lembaga sertifikasi osha">
-    <meta name="description" content="Sejarah Lembaga sertifikasi kompetensi ketenagalistrikan lsk Osha">
-{% endif %}
-
-{% if request.get_full_path == "/tentang/legalitas" %}
-    <title>LSK OSHA | Legalitas LSK ketenagalistrikan OSHA</title>
-    <meta name="keywords" content="legalitas lsk osha, legalitas lembaga sertifikasi osha">
-    <meta name="description" content="Legalitas Lembaga sertifikasi kompetensi ketenagalistrikan lsk Osha">
-{% endif %}
-
-{% if request.get_full_path == "/tentang/struktur" %}
-    <title>LSK OSHA | Struktur Organisasi LSK ketenagalistrikan OSHA</title>
-    <meta name="keywords" content="layanan lsk osha, struktur lembaga sertifikasi osha">
-    <meta name="description" content="Struktur Lembaga sertifikasi kompetensi ketenagalistrikan lsk Osha">
-{% endif %}
-
-{% if request.get_full_path == "/tentang/daftarAsesor" %}
-    <title>LSK OSHA | Daftar Asesor LSK ketenagalistrikan OSHA</title>
-    <meta name="keywords" content="lsk, daftarAsesor lsk osha, daftar asesor lsk ketenagalistrikan osha">
-    <meta name="description" content="Daftar Asesor Lembaga sertifikasi kompetensi ketenagalistrikan lsk Osha">
+    <title>LSK OSHA | Profil, Sejarah, Asesor LSK ketenagalistrikan OSHA</title>
+    <meta name="keywords" content="profil, sejarah,asesor lsk ketenagalistrikan osha">
+    <meta name="description" content="Profil, Sejarah, Asesor Lembaga sertifikasi kompetensi ketenagalistrikan lsk Osha">
 {% endif %}
 
 {% if request.get_full_path == "/pengalamanKontakForm/pengalaman" %}
@@ -115,10 +97,10 @@
                     <li class="nav-item dropdown {% if request.get_full_path == profil or request.get_full_path == legalitas or request.get_full_path == struktur or request.get_full_path == daftarAsesor %}active{% endif %}" >
                         <a class="nav-link text-uppercase dropdown-toggle" data-toggle="dropdown" href="{% url 'tentang:profil' %}">Tentang</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="{% url 'tentang:profil' %}">Sejarah Singkat</a>
-                            <a class="dropdown-item" href="{% url 'tentang:legalitas' %}">Legalitas</a>
-                            <a class="dropdown-item" href="{% url 'tentang:struktur' %}">Struktur Organisasi</a>
-                            <a class="dropdown-item" href="{% url 'tentang:daftarAsesor' %}">Daftar Asesor</a>
+                            <a class="dropdown-item" href="{% url 'tentang:profil' %}#sejarah">Sejarah Singkat</a>
+                            <a class="dropdown-item" href="{% url 'tentang:profil' %}#legalitas">Legalitas</a>
+                            <a class="dropdown-item" href="{% url 'tentang:profil' %}#struktur">Struktur Organisasi</a>
+                            <a class="dropdown-item" href="{% url 'tentang:profil' %}#asesor">Daftar Asesor</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown {% if request.get_full_path == ruang or request.get_full_path == proses or request.get_full_path == alur or request.get_full_path == regulasi or request.get_full_path == permohonan %}active{% endif %}">
@@ -128,6 +110,7 @@
                             <a class="dropdown-item" href="{% url 'sertifikasi:ruang' %}#layanan">Bidang Kami</a>
                             <a class="dropdown-item" href="{% url 'sertifikasi:ruang' %}#alur">Alur Sertifikasi</a>
                             <a class="dropdown-item" href="{% url 'sertifikasi:ruang' %}#persyaratan">Persyaratan Sertifikasi</a>
+                            <a class="dropdown-item" href="{% url 'sertifikasi:ruang' %}#kegiatanUjiKompetensi">Kegiatan Uji Kompetensi</a>
                             <a class="dropdown-item" href="{% url 'sertifikasi:ruang' %}#keluh">Keluh dan Banding</a>
                             <a class="dropdown-item" href="https://skttkdjk.esdm.go.id/web/page/download">Pedoman & Metodologi Okupasi SKTTK</a>
                         </div>

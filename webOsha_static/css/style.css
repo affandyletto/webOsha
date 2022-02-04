@@ -11632,10 +11632,29 @@ textarea.form-control {
     font-size: 13px;
 }
 
+.textLeft{
+    text-align:left;
+}
+
+.about-image {
+        display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+          margin-bottom:30px;
+    }
+.graph-image {
+        display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 80%;
+          margin-bottom:30px;
+    }
+
 @media (max-width: 767.98px) {
     .about-image {
         height: 400px;
-        margin-bottom: 30px;
+        margin: auto;
     }
 }
 
@@ -13192,5 +13211,11 @@ ul.timeline>li>span {
     color: white;
     padding: 20px;
     background-size: cover;
+    background-position: center;
+}
+
+.bgbunga{
+    background-image: url('https://bucket-aja.s3.ap-southeast-1.amazonaws.com/images/bgimage.jpg'); 
+    background-size: cover; 
     background-position: center;
 }
