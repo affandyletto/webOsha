@@ -63,10 +63,11 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+'''
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT = True
-
 PREPEND_WWW = True
+'''
 ROOT_URLCONF = 'webOsha.urls'
 TEMPLATES = [
     {
@@ -99,7 +100,7 @@ DATABASES = {
 
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.redis.RedisCache',
+        'BACKEND': 'django_redis.cache.RedisCache',
         'LOCATION': 'redis://:p560d7f886648b0cc362963fdad140764cd882ef95d4ab8dec441bac85dbf0494@ec2-54-197-157-37.compute-1.amazonaws.com:15260',
     }
 }
