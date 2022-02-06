@@ -1874,7 +1874,7 @@ body{min-width:992px!important}
 .table-bordered th,.table-bordered td{border:1px solid #dee2e6!important}
 }
 .bigText{background:#fff;color:#666;font:600 22px/1.8 "Work Sans",Arial,sans-serif}
-body{background:#fff;color:#666;font:400 16px/1.8 "Work Sans",Arial,sans-serif}
+body{background:#fff;color:black;font:500 17px/1.8 "Work Sans",Arial,sans-serif}
 body.menu-show{overflow:hidden;position:fixed;height:100%;width:100%}
 a{-webkit-transition:.3s all ease;-o-transition:.3s all ease;transition:.3s all ease;color:#627bed}
 a:hover,a:focus{text-decoration:none;color:#627bed;outline:none!important}
@@ -2496,7 +2496,7 @@ ul.timeline>li>span{color:#627bed}
 .card-box p{color:gray}
 .scrollAja{overflow-x:auto;overflow-y:hidden;white-space:nowrap}
 .bodies{background:#fff;color:#666;font:400 14px/1 "Work Sans",Arial,sans-serif}
-.img-gradient{background-image:linear-gradient(to bottom,rgba(69,202,252,0.9),rgba(48,63,159,0.95)),url(https://bucket-aja.s3.ap-southeast-1.amazonaws.com/images/sejarah_minified.jpg);background-attachment:fixed;background-size:cover;color:#fff;padding:20px;background-size:cover;background-position:center}
-.bgbunga{background-image:url(https://bucket-aja.s3.ap-southeast-1.amazonaws.com/images/bgimage.jpg);background-size:cover;background-position:center}
-.asdqwe{background-image:url('https://bucket-aja.s3.ap-southeast-1.amazonaws.com/images/ujiTT3/1 low.jpg');background-size: cover;}
+.img-gradient{background-image:linear-gradient(to bottom,rgba(69,202,252,0.9),rgba(48,63,159,0.95)),url(https://d2k7cs0xs3rhdz.cloudfront.net/images/sejarah_minified.jpg);background-attachment:fixed;background-size:cover;color:#fff;padding:20px;background-size:cover;background-position:center}
+.bgbunga{background-image:url(https://d2k7cs0xs3rhdz.cloudfront.net/images/bgimage.jpg);background-size:cover;background-position:center}
+.asdqwe{background-image:url('https://d2k7cs0xs3rhdz.cloudfront.net/images/ujiTT3/1 low.jpg');background-size: cover;}
 .image-logo{width: 50%}
