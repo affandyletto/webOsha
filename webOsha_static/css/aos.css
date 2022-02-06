@@ -178,10 +178,6 @@ body[data-aos-delay="750"] [data-aos] {
 body[data-aos-delay="750"] [data-aos].aos-animate {
     transition-delay: 0.75s;
 }
-[data-aos][data-aos][data-aos-duration="800"],
-body[data-aos-duration="800"] [data-aos] {
-    transition-duration: 0.8s;
-}
 [data-aos][data-aos][data-aos-delay="800"],
 body[data-aos-delay="800"] [data-aos] {
     transition-delay: 0;
