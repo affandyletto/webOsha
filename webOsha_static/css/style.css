@@ -1875,6 +1875,13 @@ body{min-width:992px!important}
 }
 .bigText{background:#fff;color:#666;font:600 22px/1.8 "Work Sans",Arial,sans-serif}
 body{background:#fff;color:black;font:500 17px/1.8 "Work Sans",Arial,sans-serif}
+
+
+@media (max-width: 767.98px) {
+		body{background:#fff;color:black;font:400 17px/1.6 "Work Sans",Arial,sans-serif}
+}
+
+
 body.menu-show{overflow:hidden;position:fixed;height:100%;width:100%}
 a{-webkit-transition:.3s all ease;-o-transition:.3s all ease;transition:.3s all ease;color:#627bed}
 a:hover,a:focus{text-decoration:none;color:#627bed;outline:none!important}
@@ -2218,8 +2225,14 @@ textarea.form-control{height:inherit!important}
 .textLeft{text-align:left}
 .about-image{display:block;margin-left:auto;margin-right:auto;width:50%;margin-bottom:30px}
 .graph-image{display:block;margin-left:auto;margin-right:auto;width:80%;margin-bottom:30px}
+.pdfobject-container{
+	height: 70rem; width:80%; border: 1rem solid rgba(0,0,0,.1); margin:auto;
+}
 @media (max-width: 767.98px) {
-.about-image{height:400px;margin:auto}
+.about-image{margin:auto; width:100%;}
+.pdfobject-container{
+	height: 40rem; width:80%; border: 1rem solid rgba(0,0,0,.1); margin:auto;
+}
 }
 .ftco-section{position:relative;width:100%;display:block}
 .ftco-section .nav-pills p{margin-bottom:0}
@@ -2500,3 +2513,9 @@ ul.timeline>li>span{color:#627bed}
 .bgbunga{background-image:url(https://d2k7cs0xs3rhdz.cloudfront.net/images/bgimage.jpg);background-size:cover;background-position:center}
 .asdqwe{background-image:url('https://d2k7cs0xs3rhdz.cloudfront.net/images/ujiTT3/1 low.jpg');background-size: cover;}
 .image-logo{width: 50%}
+.logoOsha{display: block;margin-left: auto;margin-right: auto;width: 100%; height:auto;}
+.bagan{height:700px;width:500px;}
+.bagan2{height:700px;width:300px;}
+@media (max-width: 767.98px) {
+.logoOsha{display: block;margin-left: auto;margin-right: auto;width: 20%; height:auto;}
+}

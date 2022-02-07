@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <div class="ftco-animate" >
-                           <div class="mapouter"><div class="gmap_canvas"><iframe class="googlemap" style="margin-left:100px;"width="653" height="323" id="gmap_canvas" src="https://maps.google.com/maps?q=lsk%20osha&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://putlocker-is.org"></a><br><style>.mapouter{position:relative;text-align:right;height:323px;width:653px;}</style><a href="https://www.embedgooglemap.net">map widget for website</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:323px;width:653px;}</style></div></div>
+                           <div class="mapouter" loading="lazy"><div class="gmap_canvas"><iframe class="googlemap" style="margin-left:100px;"width="653" height="323" id="gmap_canvas" src="https://maps.google.com/maps?q=lsk%20osha&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://putlocker-is.org"></a><br><style>.mapouter{position:relative;text-align:right;height:323px;width:653px;}</style><a href="https://www.embedgooglemap.net">map widget for website</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:323px;width:653px;}</style></div></div>
                 </div>
             </div>
                 <div class="col-md-12 text-center">
@@ -67,7 +67,7 @@
     <script src="{% static 'js/aos.js' %}"></script>
     <script src="{% static 'js/scrollax.min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
-    <script type="text/javascript">
+    <script defer type="text/javascript">
     (function () {
         var options = {
             whatsapp: "+62 811-359-709", // WhatsApp number
@@ -149,13 +149,9 @@
   "description":"lembaga sertifikasi kompetensi lsk ketenagalistrikan yang berpengalaman"
 }
 </script>
-
-<style>
-.pdfobject-container {height: 70rem; width:80%; border: 1rem solid rgba(0,0,0,.1); margin:auto; }
-</style>
 {% compress js %}
-    <script src="{% static 'js/pdfobject.min.js' %}"></script>
-    <script>
+    <script defer  src="{% static 'js/pdfobject.min.js' %}"></script>
+    <script defer>
         PDFObject.embed("https://d2k7cs0xs3rhdz.cloudfront.net/pdf/Kegiatan Uji Kompetensi.pdf", "#guide");
         PDFObject.embed("https://d2k7cs0xs3rhdz.cloudfront.net/pdf/profileOsha.pdf", "#profile");
         PDFObject.embed("https://d2k7cs0xs3rhdz.cloudfront.net/pdf/legal.pdf", "#legal");
