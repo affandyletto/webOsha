@@ -4,7 +4,7 @@ from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls.static import static
 from django.urls import re_path, include
-from .views import profilView,legalitasView,strukturView,daftarAsesorView
+from .views import profilView
 
 app_name="tentang"
 urlpatterns=[

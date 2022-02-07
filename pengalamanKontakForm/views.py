@@ -16,12 +16,7 @@ def pengalamanView(request):
 	for a in judul:
 		z=dokumentasi.objects.filter(judul__in=judulGallery.objects.filter(judul=a.judul))
 		foto.append(z)
-
-	
-	context={
-
-	}
-	return render(request,'pengalamanKontakForm/dokumentasi.html',context)
+	return render(request,'pengalamanKontakForm/dokumentasi.html')
 
 class permohonanView(TemplateView):
 	template_name="pengalamanKontakForm/permohonan.html"
