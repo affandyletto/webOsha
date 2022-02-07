@@ -1,7 +1,17 @@
- AOS.init({
- 	duration: 800,
- 	easing: 'slide'
- });
+(function () {
+        var options = {
+            whatsapp: "+62 811-359-709", // WhatsApp number
+            instagram: "lsk.osha", // Instagram username
+            call_to_action: "Hubungi kami", // Call to action
+            button_color: "#4DC247", // Color of button
+            position: "right", // Position may be 'right' or 'left'
+            order: "whatsapp,instagram", // Order of buttons
+        };
+        var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
 
 (function($) {
 
@@ -41,7 +51,76 @@
 
 	// Scrollax
    $.Scrollax();
+   $(document).ready(function () {
+            var owl = $('.legalitas-slider');
+            owl.owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    }
+                }
+            });
+            var owl = $('.pj-slider');
+            owl.owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 4
+                    }
+                }
+            });
+            $('.brand-carousel').owlCarousel({
+                  loop:false,
+                  margin:10,
+                  autoplay:true,
+                  responsive:{
+                    0:{
+                      items:1
+                    },
+                    600:{
+                      items:3
+                    },
+                    1000:{
+                      items:5
+                    }
+                  }
+                })
 
+            jQuery.event.special.touchstart = {
+            setup: function( _, ns, handle ) {
+                this.addEventListener("touchstart", handle, { passive: !ns.includes("noPreventDefault") });
+            }
+        };
+        jQuery.event.special.touchmove = {
+            setup: function( _, ns, handle ) {
+                this.addEventListener("touchmove", handle, { passive: !ns.includes("noPreventDefault") });
+            }
+        };
+        jQuery.event.special.wheel = {
+            setup: function( _, ns, handle ){
+                this.addEventListener("wheel", handle, { passive: true });
+            }
+        };
+        jQuery.event.special.mousewheel = {
+            setup: function( _, ns, handle ){
+                this.addEventListener("mousewheel", handle, { passive: true });
+            }
+        };
+                            });
 	var carousel = function() {
 		$('.home-slider').owlCarousel({
 	    loop:true,
