@@ -2519,3 +2519,8 @@ ul.timeline>li>span{color:#627bed}
 @media (max-width: 767.98px) {
 .logoOsha{display: block;margin-left: auto;margin-right: auto;width: 20%; height:auto;}
 }
+.textJudul{font-size:17px;}
+.modalSertifikasi{text-align:center; margin-top:-50px;}
+.modalSertifikasi2{text-align:center; margin-top:-10px;}
+.modalAja{font-size:23px;margin-top:5px;}
+.lampi{margin-bottom:0px;}

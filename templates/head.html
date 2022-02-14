@@ -4,6 +4,7 @@
 <html lang="id">
 
 <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 {% if request.get_full_path == "/" %}
     <title>LSK OSHA | Beranda LSK Ketenagalistrikan</title>
     <meta name="keywords" content="lsk,lsk tenaga listrik, lembaga sertifikasi kompetensi, lsk ketenagalistrikan">
@@ -131,9 +132,10 @@
                         <a href="{% url 'pengalamanKontakForm:kontak' %}" class="nav-link text-uppercase">Kontak</a>
                     </li>                                     
                              <li class="nav-item cta">
-                <a href="{% static 'SOP.pdf' %}" class="btn btn-primary">
-                    <span>Lihat SOP</span>
+                <a href="{% url 'sertifikasi:ruang' %}#persyaratan" class="btn btn-primary">
+                    <span>Permohonan Sertifikasi</span>
                 </a>
+                
             </li>          
                 </ul>
 

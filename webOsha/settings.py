@@ -63,7 +63,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT = True
 
@@ -144,8 +143,8 @@ USE_TZ = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST      ="smtp.gmail.com"
 EMAIL_PORT      =465
-EMAIL_HOST_USER ='letto.affandy@gmail.com'
-EMAIL_HOST_PASSWORD ='affandi212'
+EMAIL_HOST_USER ='lettoaffandy08@gmail.com'
+EMAIL_HOST_PASSWORD ='Kambing212'
 EMAIL_USE_TLS   =False
 EMAIL_USE_SSL   =True
 

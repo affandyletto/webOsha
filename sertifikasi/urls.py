@@ -4,11 +4,14 @@ from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf.urls.static import static
 from django.urls import re_path, include
-from .views import ruangView
+from .views import *
 
 app_name="sertifikasi"
 urlpatterns=[
 	path('/',ruangView.as_view(),name="ruang"),
+	path('/uploadPermohonan',uploadPermohonan,name="uploadPermohonan"),
+	path('/uploadPerpanjangan',uploadPerpanjangan,name="uploadPerpanjangan"),
+
 ]
 if settings.DEBUG:
     urlpatterns += staticfiles_urlpatterns()
