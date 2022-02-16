@@ -3,6 +3,7 @@ from django.views import View
 from django.core import mail
 from django.core.mail import send_mail,EmailMessage
 from django.views.generic import TemplateView
+from django.contrib import messages
 
 class ruangView(TemplateView):
 	template_name="sertifikasi/ruang.html"
@@ -20,15 +21,15 @@ def uploadPermohonan(request):
 		connection.open()
 		message=EmailMessage("Permohonan Sertifikasi Kompetensi Baru",
 			"Berikut dokumen Permohonan sertifikasi kompetensi baru dari dari email :"+email,
-			"SDM",["osha.eleska.ind@gmail.com"],connection=connection)
+			"SDM",["letto.affandy@gmail.com","osha.eleska.ind@gmail.com"],connection=connection)
 
 		message.attach(foto.name,foto.read(),foto.content_type)
 		message.attach(ktp.name,ktp.read(),ktp.content_type)
 		message.attach(ijazah.name,ijazah.read(),ijazah.content_type)
 		message.attach(dokumen.name,dokumen.read(),dokumen.content_type)
-
 		message.send()
 		connection.close()
+		messages.success(request, 'anda telah mengirim email kepada kami')
 		return redirect('sertifikasi:ruang')
 
 	return redirect('sertifikasi:ruang')
@@ -44,8 +45,7 @@ def uploadPerpanjangan(request):
 		connection.open()
 		message=EmailMessage("Permohonan Sertifikasi Kompetensi Baru",
 			"Berikut dokumen Permohonan sertifikasi kompetensi baru dari dari email :"+email,
-			"SDM",["osha.eleska.ind@gmail.com"],connection=connection)
-
+			"SDM",["letto.affandy@gmail.com","osha.eleska.ind@gmail.com"],connection=connection)
 		message.attach(foto.name,foto.read(),foto.content_type)
 		message.attach(ktp.name,ktp.read(),ktp.content_type)
 		message.attach(sertifikat.name,sertifikat.read(),sertifikat.content_type)
@@ -53,6 +53,7 @@ def uploadPerpanjangan(request):
 
 		message.send()
 		connection.close()
+		messages.success(request, 'anda telah mengirim email kepada kami')
 		return redirect('sertifikasi:ruang')
 
 	return redirect('sertifikasi:ruang')

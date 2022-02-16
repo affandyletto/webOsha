@@ -1,6 +1,7 @@
 {% load static %}
 {% include 'head.html' %}
 <main>
+
 <section id="maklumat">
 <div class="img-gradient" loading="lazy">
     <h3 class="mb-4 font-weight-bold text-dark" style="margin-top:80px; text-align:center; font-weight: 600; color:#371F1F">
@@ -422,7 +423,7 @@
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <form action="uploadPermohonan" method="post" enctype="multipart/form-data">
+                <form action="uploadPermohonan" method="post" enctype="multipart/form-data" onsubmit="kirimEmail()">
                     {% csrf_token %}
                     <div class="modal-header">
                         <h5 class="modal-title" id="skUploadLabel">Kirim Dokumen</h5>
@@ -436,16 +437,23 @@
                         </p>
                         <div class="position-relative form-group">
                             <label>1. Pasfoto warna 3 x 4 cm, latar belakang berwarna merah.</label>
-                            <input name="foto1" type="file" class="form-control-file">
+                            <input name="foto1" type="file" class="form-control-file" required>
                             <label>2. Foto Copy KTP</label>
-                            <input name="ktp" type="file" class="form-control-file">
+                            <input name="ktp" type="file" class="form-control-file" required>
                             <label>3. Foto Copy Ijazah terakhir</label>
-                            <input name="ijazah" type="file" class="form-control-file">
+                            <input name="ijazah" type="file" class="form-control-file" required>
                             <label>4. Dokumen Form PP-1.1 sampai PP-1.4</label>
-                            <input name="dokumen" type="file" class="form-control-file"><br/>
+                            <input name="dokumen" type="file" class="form-control-file" required><br/>
                             <label>Alamat Email Pemohon :</label>
-                            <input name="email" type="text" class="form-control-file" style="height:30px; width:400px;">
+                            <input name="email" type="text" class="form-control-file" style="height:30px; width:400px;" required>
                         </div>
+                    </div>
+                    <div id="LOADD">
+                        <div class="loaderAJA"></div>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sedang Mengirim email...</p>
+                    </div>
+                    <div class="alert alert-success" id="sukses">
+                      <strong>Berhasil! </strong> Dokumen telah terkirim, kami akan memproses dokumen tersebut dan mengirimkan email 
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
@@ -460,7 +468,7 @@
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <form action="uploadPerpanjangan" method="post" enctype="multipart/form-data">
+                <form action="uploadPerpanjangan" method="post" enctype="multipart/form-data" onsubmit="kirimEmail()">
                     {% csrf_token %}
                     <div class="modal-header">
                         <h5 class="modal-title" id="skUploadLabel">Kirim Dokumen</h5>
@@ -474,20 +482,27 @@
                         </p>
                         <div class="position-relative form-group">
                             <label>1. Pasfoto warna 3 x 4 cm, latar belakang berwarna merah.</label>
-                            <input name="foto1" type="file" class="form-control-file">
+                            <input name="foto1" type="file" class="form-control-file" required>
                             <label>2. Foto Copy KTP</label>
-                            <input name="ktp" type="file" class="form-control-file">
+                            <input name="ktp" type="file" class="form-control-file" required>
                             <label>3. Foto Copy Sertifikat Kompetensi</label>
-                            <input name="sertifikat" type="file" class="form-control-file">
+                            <input name="sertifikat" type="file" class="form-control-file" required>
                             <label>4. Dokumen Form PP-1.1 sampai PP-1.4</label>
-                            <input name="dokumen" type="file" class="form-control-file"><br/>
+                            <input name="dokumen" type="file" class="form-control-file" required><br/>
                             <label>Alamat Email Pemohon :</label>
-                            <input name="email" type="text" class="form-control-file" style="height:30px; width:400px;">
+                            <input name="email" type="text" class="form-control-file" style="height:30px; width:400px;" required>
                         </div>
+                    </div>
+                    <div id="LOADD">
+                        <div class="loaderAJA"></div>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sedang Mengirim email...</p>
+                    </div>
+                    <div class="alert alert-success" id="sukses">
+                      <strong>Berhasil! </strong> Dokumen telah terkirim, kami akan memproses dokumen tersebut dan mengirimkan email 
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                        <button type="submit" class="btn btn-danger">Kirim</button>
+                        <button type="submit" class="btn btn-danger" onclick="kirimEmail()">Kirim</button>
                     </div>
                 </form>
             </div>

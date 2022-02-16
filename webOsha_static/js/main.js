@@ -12,7 +12,17 @@
         s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
         var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
     })();
+function kirimEmail(){
+    document.getElementById("LOADD").style.display = "block";
 
+    setTimeout(function(){
+    document.getElementById('LOADD').style.display= 'none';
+    document.getElementById("sukses").style.display = "block";
+    }, 10000);
+  	setTimeout(function(){  		
+    document.getElementById("sukses").style.display = "none";
+  	},16000);
+}
 (function($) {
 
 	"use strict";

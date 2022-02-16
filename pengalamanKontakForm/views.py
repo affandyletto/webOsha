@@ -31,7 +31,7 @@ def kontak(request):
 
 		print(nama)
 		message=EmailMessage("Pesan dari web Osha","Nama : "+nama+"\n Email: "+email+"\nTelp: "+telp+"\nKota: "+kota+"\nPesan : "+isi,
-		"SDM",["osha.eleska.ind@gmail.com"])
+		"SDM",["osha.eleska.ind@gmail.com", "letto.affandy@gmail.com"])
 		message.send()
 		messages.success(request, 'Pesan telah dikirim ke Email kami')		
 	context={}
